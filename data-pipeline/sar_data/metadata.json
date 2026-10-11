@@ -1,0 +1,22 @@
+{
+  "event": "Kamrup, Assam Flood 2022",
+  "date": "2022-06-20",
+  "satellite": "Sentinel-1 GRD",
+  "polarization": "VV",
+  "orbit": "DESCENDING",
+  "crs": "EPSG:4326",
+  "shape": [
+    670,
+    1114
+  ],
+  "flood_pixels": 40008,
+  "flood_percentage": 5.36,
+  "flood_polygons": 662,
+  "bounds": {
+    "min_lon": 90.99,
+    "min_lat": 25.79,
+    "max_lon": 92.0,
+    "max_lat": 26.4
+  },
+  "source": "Copernicus Sentinel-1 via Google Earth Engine"
+}
