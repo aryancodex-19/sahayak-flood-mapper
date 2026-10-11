@@ -1,9 +1,11 @@
-import type { DataBundle, Settlement, FloodGeoJSON, DashboardStats } from "@/types/data";
+import type { DataBundle, Settlement, FloodGeoJSON, DashboardStats, Scenario } from "@/types/data";
 
 import realCutoffRaw from "./real_cutoff.json";
 import realPracticalRaw from "./real_practical.json";
 import realConnectedRaw from "./real_connected.json";
 import realPriorityRaw from "./real_priority.json";
+import realEventCutoffRaw from "./real_event_cutoff.json";
+import realEventPracticalRaw from "./real_event_practical.json";
 
 // Population mapping based on settlement classification
 const POPULATION_MAP: Record<string, number> = {
@@ -75,12 +77,32 @@ if (realPriorityRaw && Array.isArray((realPriorityRaw as { features?: PriorityFe
   }
 }
 
-// Transform real data into Settlement models
-function buildSettlements(): Settlement[] {
+// Transform real or severe data into Settlement models
+function buildSettlements(scenario: Scenario = "severe"): Settlement[] {
   const result: Settlement[] = [];
 
-  // 1. Strict Cut-offs (7)
-  const strictItems = (realCutoffRaw as RawCutoffItem[]) || [];
+  // Determine datasets based on scenario
+  const strictItems: RawCutoffItem[] =
+    scenario === "real"
+      ? (realEventCutoffRaw as RawCutoffItem[]) || []
+      : (realCutoffRaw as RawCutoffItem[]) || [];
+
+  const practicalItems: RawPracticalItem[] =
+    scenario === "real"
+      ? (realEventPracticalRaw as RawPracticalItem[]) || []
+      : (realPracticalRaw as RawPracticalItem[]) || [];
+
+  // For Real Event, all 104 settlements remain connected (0 strict, 0 practical cut-offs)
+  const connectedItems: RawConnectedItem[] =
+    scenario === "real"
+      ? [
+          ...((realCutoffRaw as RawConnectedItem[]) || []),
+          ...((realPracticalRaw as RawConnectedItem[]) || []),
+          ...((realConnectedRaw as RawConnectedItem[]) || []),
+        ]
+      : (realConnectedRaw as RawConnectedItem[]) || [];
+
+  // 1. Strict Cut-offs
   for (const item of strictItems) {
     const pInfo = priorityFeatureMap.get(item.name);
     const pType = (item.place_type || item.type || "village").toLowerCase();
@@ -96,13 +118,13 @@ function buildSettlements(): Settlement[] {
       lon: item.longitude,
       priorityScore: score,
       status: "cut-off",
+      statusType: "strict-cutoff",
       distanceToHospitalKm: Math.round(distanceKm * 10) / 10,
       isolatedSinceHours: 48,
     });
   }
 
-  // 2. Practical Cut-offs (8)
-  const practicalItems = (realPracticalRaw as RawPracticalItem[]) || [];
+  // 2. Practical Cut-offs
   for (const item of practicalItems) {
     const pType = (item.place_type || item.type || "suburb").toLowerCase();
     const pop = POPULATION_MAP[pType] ?? 800;
@@ -122,13 +144,13 @@ function buildSettlements(): Settlement[] {
       lon: item.longitude,
       priorityScore: score,
       status: "cut-off",
+      statusType: "practical-cutoff",
       distanceToHospitalKm: Math.round(distanceKm * 10) / 10,
       isolatedSinceHours: 24,
     });
   }
 
-  // 3. Connected Settlements (89)
-  const connectedItems = (realConnectedRaw as RawConnectedItem[]) || [];
+  // 3. Connected Settlements
   for (const item of connectedItems) {
     const pType = (item.place_type || item.type || "village").toLowerCase();
     const pop = POPULATION_MAP[pType] ?? 800;
@@ -144,6 +166,7 @@ function buildSettlements(): Settlement[] {
       lon: item.longitude,
       priorityScore: score,
       status: "accessible",
+      statusType: "connected",
       distanceToHospitalKm: Math.round(distanceKm * 10) / 10,
       isolatedSinceHours: 0,
     });
@@ -196,24 +219,28 @@ function buildFloodExtent(): FloodGeoJSON {
   };
 }
 
-export function loadData(): DataBundle {
+export function loadData(scenario: Scenario = "severe"): DataBundle & { stats: DashboardStats } {
+  const flood = buildFloodExtent();
+  const settlements = buildSettlements(scenario);
+  const stats = computeStats({ flood, settlements });
   return {
-    flood: buildFloodExtent(),
-    settlements: buildSettlements(),
+    flood,
+    settlements,
+    stats,
   };
 }
 
 export function computeStats(data: DataBundle): DashboardStats {
   const { settlements } = data;
   
-  // Cut-off settlements (7 strict + 8 practical = 15)
+  // Cut-off settlements (strict + practical)
   const cutOffSettlements = settlements.filter((s) => s.status === "cut-off");
   const cutOffCount = cutOffSettlements.length;
 
   // Total affected population across cut-off settlements
   const affectedPopulation = cutOffSettlements.reduce((sum, s) => sum + s.population, 0);
 
-  // Average priority score across cut-off settlements
+  // Average priority score across cut-off settlements (or 0 if none)
   const avgPriority =
     cutOffSettlements.length > 0
       ? cutOffSettlements.reduce((sum, s) => sum + s.priorityScore, 0) / cutOffSettlements.length

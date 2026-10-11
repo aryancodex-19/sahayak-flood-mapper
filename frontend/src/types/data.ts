@@ -1,4 +1,6 @@
 export type SettlementStatus = "cut-off" | "accessible";
+export type SettlementStatusType = "strict-cutoff" | "practical-cutoff" | "connected";
+export type Scenario = "real" | "severe";
 
 export interface Settlement {
   id: string;
@@ -8,6 +10,7 @@ export interface Settlement {
   lon: number;
   priorityScore: number;
   status: SettlementStatus;
+  statusType: SettlementStatusType;
   distanceToHospitalKm: number;
   isolatedSinceHours: number;
 }

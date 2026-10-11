@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
 import type { Language } from "@/types/data";
-import type { TranslationKey } from "./i18n";
+import { translations, type TranslationKey } from "./i18n";
 
 interface LanguageContextValue {
   language: Language;
@@ -12,6 +12,10 @@ export const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function useLanguage() {
   const ctx = useContext(LanguageContext);
-  if (!ctx) throw new Error("useLanguage must be used inside LanguageContext.Provider");
-  return ctx;
+  if (ctx) return ctx;
+  return {
+    language: "en" as Language,
+    setLanguage: () => {},
+    t: (key: TranslationKey) => translations.en[key] || "",
+  };
 }

@@ -1,12 +1,14 @@
 import type { ReactNode } from "react";
-import type { Language } from "@/types/data";
+import type { Language, Scenario } from "@/types/data";
 import { Navbar } from "./navbar";
 import { Sidebar } from "./sidebar";
 
 interface AppShellProps {
   children: ReactNode;
-  language: Language;
-  onLanguageChange: (lang: Language) => void;
+  scenario?: Scenario;
+  onScenarioChange?: (s: Scenario) => void;
+  language?: Language;
+  onLanguageChange?: (lang: Language) => void;
   showFlood: boolean;
   onShowFloodChange: (v: boolean) => void;
   showSettlements: boolean;

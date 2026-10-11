@@ -1,18 +1,16 @@
 import { motion } from "framer-motion";
 import { Droplets, AlertTriangle, Users, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { useLanguage } from "@/lib/language-context";
 import type { DashboardStats } from "@/types/data";
 
 interface StatsRowProps { stats: DashboardStats; }
 
 export function StatsRow({ stats }: StatsRowProps) {
-  const { t } = useLanguage();
   const cards = [
-    { label: t("floodExtentStat"), value: `${stats.floodAreaHectares.toLocaleString()} ${t("hectares")}`, sub: t("totalInundated"), icon: Droplets, tint: "bg-cyan-500/10 text-cyan-400" },
-    { label: t("cutOffStat"), value: stats.cutOffCount, sub: t("isolatedCommunities"), icon: AlertTriangle, tint: "bg-red-500/10 text-red-400" },
-    { label: t("affectedPop"), value: stats.affectedPopulation.toLocaleString(), sub: t("inCutOffZones"), icon: Users, tint: "bg-amber-500/10 text-amber-400" },
-    { label: t("avgPriority"), value: stats.averagePriorityScore.toFixed(2), sub: t("acrossAllSettlements"), icon: TrendingUp, tint: "bg-emerald-500/10 text-emerald-400" },
+    { label: "Flood Extent", value: `${stats.floodAreaHectares.toLocaleString()} hectares`, sub: "Total inundated area", icon: Droplets, tint: "bg-cyan-500/10 text-cyan-400" },
+    { label: "Cut-off Settlements", value: stats.cutOffCount, sub: "Isolated communities", icon: AlertTriangle, tint: "bg-red-500/10 text-red-400" },
+    { label: "Affected Population", value: stats.affectedPopulation.toLocaleString(), sub: "In cut-off zones", icon: Users, tint: "bg-amber-500/10 text-amber-400" },
+    { label: "Avg Priority Score", value: stats.averagePriorityScore.toFixed(2), sub: "Across all settlements", icon: TrendingUp, tint: "bg-emerald-500/10 text-emerald-400" },
   ];
 
   return (
