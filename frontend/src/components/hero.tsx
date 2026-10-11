@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
-import { useLanguage } from "@/lib/language-context";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,7 +22,6 @@ interface HeroProps {
 }
 
 export function Hero({ onViewMap }: HeroProps) {
-  const { t } = useLanguage();
   return (
     <section className="relative -mx-6 -mt-6 min-h-screen overflow-hidden">
       <div className="absolute inset-x-[-18%] bottom-[-34%] h-[78%] rounded-[100%] blur-3xl" style={{ background: "radial-gradient(ellipse at center, rgba(56, 189, 248, 0.58) 0%, rgba(59, 130, 246, 0.34) 34%, rgba(99, 102, 241, 0.2) 58%, transparent 78%)" }} />
@@ -32,7 +30,7 @@ export function Hero({ onViewMap }: HeroProps) {
 
       <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative mx-auto flex min-h-[80vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center">
         <motion.div variants={itemVariants} className="rounded-full border border-border bg-background/50 px-4 py-1.5 text-sm font-medium text-muted-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_12px_40px_rgba(0,0,0,0.08)] backdrop-blur-md">
-          {t("heroBadge")}
+          Kamrup, Assam — Live Monitoring
         </motion.div>
         <motion.h1 variants={itemVariants} className="mt-8 max-w-3xl text-balance text-5xl font-medium leading-[0.96] tracking-normal md:text-6xl lg:text-7xl">
           <motion.span
@@ -40,11 +38,11 @@ export function Hero({ onViewMap }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            {t("heroTitle")}
+            Flood Damage Mapping from Space
           </motion.span>
         </motion.h1>
         <motion.p variants={itemVariants} className="mt-6 max-w-2xl text-pretty text-base leading-7 text-muted-foreground md:text-lg">
-          {t("heroSubtitle")}
+          Satellite-based rescue prioritization for cut-off settlements in Assam.
         </motion.p>
         <motion.div variants={itemVariants} className="mt-10 flex flex-col items-center gap-3 sm:flex-row">
           <motion.button
@@ -52,14 +50,14 @@ export function Hero({ onViewMap }: HeroProps) {
             onClick={onViewMap}
             className="inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-[0_1px_0_rgba(255,255,255,0.24)_inset,0_18px_60px_rgba(0,0,0,0.12)] transition hover:opacity-90"
           >
-            {t("viewMap")} <ArrowRight className="h-4 w-4" />
+            View Live Map <ArrowRight className="h-4 w-4" />
           </motion.button>
 <motion.a
   {...buttonMotion}
   href="#report"
   className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-border bg-background/45 px-5 text-sm font-semibold text-foreground/80 backdrop-blur transition hover:bg-foreground/5 hover:text-foreground"
 >
-  <Download className="h-4 w-4" /> {t("downloadReport")}
+  <Download className="h-4 w-4" /> Download Report
 </motion.a>
         </motion.div>
       </motion.div>

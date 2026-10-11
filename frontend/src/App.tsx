@@ -5,52 +5,70 @@ import { StatsRow } from "@/components/stats-row";
 import { FloodMap } from "@/components/flood-map";
 import { PriorityTable } from "@/components/priority-table";
 import { SituationReport } from "@/components/situation-report";
-import { LanguageContext } from "@/lib/language-context";
 import { loadData, computeStats } from "@/data";
-import { t as translate, type TranslationKey } from "@/lib/i18n";
-import type { Language } from "@/types/data";
+import type { Scenario } from "@/types/data";
 
 type View = "landing" | "dashboard";
 
 export default function App() {
   const [view, setView] = useState<View>("landing");
-  const [language, setLanguage] = useState<Language>("en");
+  const [scenario, setScenario] = useState<Scenario>("severe");
   const [showFlood, setShowFlood] = useState(true);
   const [showSettlements, setShowSettlements] = useState(true);
 
-  const data = useMemo(() => loadData(), []);
+  const data = useMemo(() => loadData(scenario), [scenario]);
   const stats = useMemo(() => computeStats(data), [data]);
 
-  const langValue = {
-    language,
-    setLanguage,
-    t: (key: TranslationKey) => translate(language, key),
-  };
-
   if (view === "landing") {
-    return (
-      <LanguageContext.Provider value={langValue}>
-        <Hero onViewMap={() => setView("dashboard")} />
-      </LanguageContext.Provider>
-    );
+    return <Hero onViewMap={() => setView("dashboard")} />;
   }
 
   return (
-    <LanguageContext.Provider value={langValue}>
-      <AppShell
-        language={language}
-        onLanguageChange={setLanguage}
-        showFlood={showFlood}
-        onShowFloodChange={setShowFlood}
-        showSettlements={showSettlements}
-        onShowSettlementsChange={setShowSettlements}
-        onBackToHome={() => setView("landing")}
-      >
-        <StatsRow stats={stats} />
-        <FloodMap flood={data.flood} settlements={data.settlements} showFlood={showFlood} showSettlements={showSettlements} />
-        <PriorityTable settlements={data.settlements} />
-        <SituationReport data={data} stats={stats} language={language} />
-      </AppShell>
-    </LanguageContext.Provider>
+    <AppShell
+      scenario={scenario}
+      onScenarioChange={setScenario}
+      language="en"
+      onLanguageChange={() => {}}
+      showFlood={showFlood}
+      onShowFloodChange={setShowFlood}
+      showSettlements={showSettlements}
+      onShowSettlementsChange={setShowSettlements}
+      onBackToHome={() => setView("landing")}
+    >
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight">Kamrup Flood Intelligence</h1>
+          <p className="text-xs text-muted-foreground">Satellite SAR monitoring & rescue prioritization</p>
+        </div>
+        <div className="inline-flex rounded-lg border border-border bg-card/60 p-1 backdrop-blur-md">
+          <button
+            type="button"
+            onClick={() => setScenario("severe")}
+            className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
+              scenario === "severe"
+                ? "bg-primary text-primary-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Severe Scenario
+          </button>
+          <button
+            type="button"
+            onClick={() => setScenario("real")}
+            className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
+              scenario === "real"
+                ? "bg-primary text-primary-foreground shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Real Event
+          </button>
+        </div>
+      </div>
+      <StatsRow stats={stats} />
+      <FloodMap flood={data.flood} settlements={data.settlements} showFlood={showFlood} showSettlements={showSettlements} />
+      <PriorityTable settlements={data.settlements} />
+      <SituationReport data={data} stats={stats} language="en" />
+    </AppShell>
   );
 }
