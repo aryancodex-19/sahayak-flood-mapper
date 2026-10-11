@@ -1,0 +1,14 @@
+{
+  "method": "Multi-threshold consistency",
+  "thresholds": [
+    -2.5,
+    -3.0,
+    -3.34,
+    -3.5,
+    -4.0
+  ],
+  "mean_agreement": 0.126,
+  "high_conf_pixels": 76022,
+  "high_conf_pct": 10.19,
+  "note": "Optical validation failed due to 51% cloud cover \u2014 SAR-based consistency validation"
+}
