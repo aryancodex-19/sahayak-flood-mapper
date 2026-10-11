@@ -1,5 +1,5 @@
 """
-Overlay flood raster mask on road network to detect submerged roads, bridges, and tunnels.
+Overlay flood mask (GeoJSON or GeoTIFF) on road network to detect submerged roads, bridges, and tunnels.
 """
 
 import sys
@@ -10,7 +10,6 @@ import pandas as pd
 import numpy as np
 import rasterio
 from rasterio.mask import mask
-from rasterio.features import geometry_mask
 from scipy.ndimage import label, find_objects
 from shapely.geometry import box
 import shapely
@@ -24,6 +23,112 @@ def is_osm_flag_active(val) -> bool:
     return val_str not in ("no", "false", "0", "none", "")
 
 
+def load_flood_from_geojson(path: Path) -> gpd.GeoDataFrame:
+    """
+    Loads flood mask polygons from a GeoJSON file using geopandas.read_file().
+    Ensures valid geometries and CRS alignment to EPSG:4326.
+    """
+    path = Path(path).resolve()
+    if not path.exists():
+        raise FileNotFoundError(f"Flood GeoJSON mask not found at: {path}")
+
+    print(f"Loading flood mask from GeoJSON: {path.name}...")
+    flood_gdf = gpd.read_file(path)
+
+    # Validate and standardize CRS to EPSG:4326
+    if flood_gdf.crs is None:
+        print("Notice: Flood GeoJSON CRS undefined, defaulting to EPSG:4326.")
+        flood_gdf.set_crs(epsg=4326, inplace=True)
+    elif flood_gdf.crs.to_epsg() != 4326:
+        print(f"Reprojecting flood GeoJSON from {flood_gdf.crs} to EPSG:4326...")
+        flood_gdf = flood_gdf.to_crs(epsg=4326)
+
+    # Remove empty or invalid geometries
+    flood_gdf = flood_gdf[~flood_gdf.is_empty & flood_gdf.geometry.notna()].copy()
+    print(f"Loaded {len(flood_gdf):,} flood polygons (EPSG:4326).")
+    return flood_gdf
+
+
+def overlay_flood_geojson(edges: gpd.GeoDataFrame, flood_gdf: gpd.GeoDataFrame) -> np.ndarray:
+    """
+    Identifies edges that intersect with flood polygons using spatial index (sindex)
+    and GeoPandas .intersects() for high performance.
+    """
+    if flood_gdf.empty or edges.empty:
+        return np.array([], dtype=int)
+
+    print("Querying spatial index for road edge-polygon candidate intersections...")
+    # sindex.query(flood_gdf.geometry) returns (flood_indices, edge_indices)
+    candidate_flood_idx, candidate_edge_idx = edges.sindex.query(flood_gdf.geometry)
+    print(f"Candidate intersection pairs identified: {len(candidate_edge_idx):,}")
+
+    if len(candidate_edge_idx) == 0:
+        return np.array([], dtype=int)
+
+    print("Evaluating exact .intersects() on candidate pairs...")
+    edge_geoms = edges.geometry.iloc[candidate_edge_idx].reset_index(drop=True)
+    flood_geoms = flood_gdf.geometry.iloc[candidate_flood_idx].reset_index(drop=True)
+
+    intersect_mask = edge_geoms.intersects(flood_geoms)
+    flooded_edge_indices = np.unique(candidate_edge_idx[intersect_mask])
+    return flooded_edge_indices
+
+
+def overlay_flood_geotiff(edges: gpd.GeoDataFrame, tif_path: Path) -> np.ndarray:
+    """
+    Identifies edges that intersect with flooded pixels (value=1) in a GeoTIFF raster.
+    """
+    print(f"Loading flood raster mask from: {tif_path.name}...")
+    with rasterio.open(tif_path) as src:
+        raster_crs = src.crs
+        raster_data = src.read(1)
+        raster_transform = src.transform
+
+        # Align edges CRS if needed
+        if raster_crs is not None and edges.crs != raster_crs:
+            print(f"Reprojecting edges from {edges.crs} to raster CRS ({raster_crs})...")
+            edges = edges.to_crs(raster_crs)
+
+        flooded_pixel_count = int(np.count_nonzero(raster_data == 1))
+        print(f"Flooded pixels detected in raster: {flooded_pixel_count:,}")
+
+        if flooded_pixel_count == 0:
+            return np.array([], dtype=int)
+
+        # Build bounding boxes of flooded regions
+        labeled_mask, _ = label(raster_data == 1)
+        slices = find_objects(labeled_mask)
+
+        patch_boxes = []
+        for r_slice, c_slice in slices:
+            xs, ys = rasterio.transform.xy(
+                raster_transform,
+                [r_slice.start, r_slice.stop],
+                [c_slice.start, c_slice.stop],
+            )
+            patch_boxes.append(box(min(xs), min(ys), max(xs), max(ys)))
+
+        combined_flood_bounds = shapely.unary_union(patch_boxes)
+
+        candidate_matches = edges.sindex.query(combined_flood_bounds, predicate="intersects")
+        candidate_indices = np.unique(candidate_matches)
+        print(f"Candidate edges in flood zones: {len(candidate_indices):,} (out of {len(edges):,})")
+
+        flooded_indices = []
+        for idx in candidate_indices:
+            geom = edges.geometry.iloc[idx]
+            if geom is None or geom.is_empty:
+                continue
+            try:
+                out_img, _ = mask(src, [geom], crop=True, all_touched=True, filled=False)
+                if np.any(out_img == 1):
+                    flooded_indices.append(idx)
+            except Exception:
+                continue
+
+        return np.array(flooded_indices, dtype=int)
+
+
 def overlay_flood_on_network(
     edges_path: Path = None,
     flood_mask_path: Path = None,
@@ -31,115 +136,72 @@ def overlay_flood_on_network(
     output_geojson_path: Path = None,
 ):
     """
-    Overlays a flood raster mask on road network edges using spatial indexing.
+    Overlays flood mask (GeoJSON polygons or GeoTIFF raster) on road network edges.
 
     :param edges_path: Path to road_edges.gpkg
-    :param flood_mask_path: Path to flood raster (dummy_flood_mask.tif)
-    :param output_gpkg_path: Path for flooded_edges.gpkg
-    :param output_geojson_path: Path for flooded_edges.geojson
+    :param flood_mask_path: Path to flood mask file (.geojson or .tif)
+    :param output_gpkg_path: Destination path for flooded_edges.gpkg
+    :param output_geojson_path: Destination path for flooded_edges.geojson
     """
     base_dir = Path(__file__).resolve().parent
 
-    if edges_path is None:
-        edges_path = base_dir / "road_edges.gpkg"
-    else:
-        edges_path = Path(edges_path).resolve()
-
+    edges_path = Path(edges_path or base_dir / "road_edges.gpkg").resolve()
     if flood_mask_path is None:
         flood_mask_path = base_dir / "dummy_flood_mask.tif"
     else:
         flood_mask_path = Path(flood_mask_path).resolve()
 
-    if output_gpkg_path is None:
-        output_gpkg_path = base_dir / "flooded_edges.gpkg"
-    else:
-        output_gpkg_path = Path(output_gpkg_path).resolve()
-
-    if output_geojson_path is None:
-        output_geojson_path = base_dir / "flooded_edges.geojson"
-    else:
-        output_geojson_path = Path(output_geojson_path).resolve()
+    output_gpkg_path = Path(output_gpkg_path or base_dir / "flooded_edges.gpkg").resolve()
+    output_geojson_path = Path(output_geojson_path or base_dir / "flooded_edges.geojson").resolve()
 
     if not edges_path.exists():
         raise FileNotFoundError(f"Road network file not found at: {edges_path}")
 
     if not flood_mask_path.exists():
-        raise FileNotFoundError(f"Flood mask raster not found at: {flood_mask_path}")
+        raise FileNotFoundError(f"Flood mask file not found at: {flood_mask_path}")
 
     print(f"Loading road edges from: {edges_path}...")
     edges = gpd.read_file(edges_path)
     total_edges = len(edges)
     print(f"Total road edges loaded: {total_edges:,}")
 
+    # Standardize CRS of edges to EPSG:4326
+    if edges.crs is None:
+        print("Notice: road_edges CRS undefined, defaulting to EPSG:4326.")
+        edges.set_crs(epsg=4326, inplace=True)
+    elif edges.crs.to_epsg() != 4326:
+        print(f"Reprojecting edges from {edges.crs} to EPSG:4326...")
+        edges = edges.to_crs(epsg=4326)
+
     # Initialize flooded column
     edges["flooded"] = False
 
-    # Open raster and check CRS
-    print(f"Loading flood raster mask from: {flood_mask_path}...")
-    with rasterio.open(flood_mask_path) as src:
-        raster_crs = src.crs
-        raster_data = src.read(1)
-        raster_transform = src.transform
+    # Determine input type by file extension
+    ext = flood_mask_path.suffix.lower()
+    print(f"Flood mask input format: '{ext}' ({flood_mask_path.name})")
 
-        # CRS Alignment
-        if edges.crs is None:
-            print("Notice: road_edges CRS undefined, setting to EPSG:4326.")
-            edges.set_crs(epsg=4326, inplace=True)
+    if ext in (".geojson", ".json"):
+        # GeoJSON input
+        flood_gdf = load_flood_from_geojson(flood_mask_path)
+        if edges.crs != flood_gdf.crs:
+            edges = edges.to_crs(flood_gdf.crs)
+        flooded_indices = overlay_flood_geojson(edges, flood_gdf)
+    elif ext in (".tif", ".tiff"):
+        # GeoTIFF input
+        flooded_indices = overlay_flood_geotiff(edges, flood_mask_path)
+    else:
+        # Fallback: try GeoJSON first, then GeoTIFF
+        try:
+            flood_gdf = load_flood_from_geojson(flood_mask_path)
+            flooded_indices = overlay_flood_geojson(edges, flood_gdf)
+        except Exception:
+            flooded_indices = overlay_flood_geotiff(edges, flood_mask_path)
 
-        if raster_crs is not None and edges.crs != raster_crs:
-            print(f"Reprojecting edges from {edges.crs} to raster CRS ({raster_crs})...")
-            edges = edges.to_crs(raster_crs)
+    # Mark flooded edges
+    if len(flooded_indices) > 0:
+        edges.loc[edges.index[flooded_indices], "flooded"] = True
 
-        # Check for flooded pixels
-        flooded_pixel_count = int(np.count_nonzero(raster_data == 1))
-        print(f"Flooded pixels detected in raster: {flooded_pixel_count:,}")
-
-        # Edge case: Empty flood mask
-        if flooded_pixel_count == 0:
-            print("[INFO] Flood mask has no flooded pixels (value=1). No edges flooded.")
-            candidate_indices = np.array([], dtype=int)
-        else:
-            # Spatial indexing: Find bounding boxes of flooded connected patches
-            print("Building spatial bounding boxes for flooded regions...")
-            labeled_mask, num_features = label(raster_data == 1)
-            slices = find_objects(labeled_mask)
-
-            patch_boxes = []
-            for r_slice, c_slice in slices:
-                xs, ys = rasterio.transform.xy(
-                    raster_transform,
-                    [r_slice.start, r_slice.stop],
-                    [c_slice.start, c_slice.stop],
-                )
-                patch_boxes.append(box(min(xs), min(ys), max(xs), max(ys)))
-
-            combined_flood_bounds = shapely.unary_union(patch_boxes)
-
-            # Query spatial index of road edges to find only candidates
-            print("Querying spatial index for candidate intersecting road edges...")
-            candidate_matches = edges.sindex.query(combined_flood_bounds, predicate="intersects")
-            candidate_indices = np.unique(candidate_matches)
-            print(f"Candidate edges in flood zones: {len(candidate_indices):,} (out of {total_edges:,})")
-
-            # Verify intersection for candidate edges using rasterio mask / geometry_mask
-            print("Verifying precise edge-raster intersections...")
-            flooded_indices = []
-            for idx in candidate_indices:
-                geom = edges.geometry.iloc[idx]
-                if geom is None or geom.is_empty:
-                    continue
-                try:
-                    out_img, _ = mask(src, [geom], crop=True, all_touched=True, filled=False)
-                    if np.any(out_img == 1):
-                        flooded_indices.append(idx)
-                except Exception:
-                    # In case geometry is slightly outside bounds or degenerated
-                    continue
-
-            if flooded_indices:
-                edges.loc[edges.index[flooded_indices], "flooded"] = True
-
-    # Check bridge and tunnel status
+    # Check bridge and tunnel status using OSM tags
     has_bridge_col = "bridge" in edges.columns
     has_tunnel_col = "tunnel" in edges.columns
 
@@ -208,19 +270,21 @@ def overlay_flood_on_network(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Overlay flood mask on road network to find submerged roads, bridges, and tunnels."
+        description="Overlay flood mask (GeoJSON or GeoTIFF) on road network to find submerged roads, bridges, and tunnels."
+    )
+    parser.add_argument(
+        "--input",
+        "--flood-mask",
+        dest="input_mask",
+        type=str,
+        default=None,
+        help="Path to flood mask file (.geojson or .tif). Default: dummy_flood_mask.tif in script folder.",
     )
     parser.add_argument(
         "--edges",
         type=str,
         default=None,
         help="Path to road_edges.gpkg (default: road_edges.gpkg in script folder)",
-    )
-    parser.add_argument(
-        "--flood-mask",
-        type=str,
-        default=None,
-        help="Path to dummy_flood_mask.tif (default: dummy_flood_mask.tif in script folder)",
     )
     parser.add_argument(
         "--output-gpkg",
@@ -240,7 +304,7 @@ def main():
     try:
         overlay_flood_on_network(
             edges_path=args.edges,
-            flood_mask_path=args.flood_mask,
+            flood_mask_path=args.input_mask,
             output_gpkg_path=args.output_gpkg,
             output_geojson_path=args.output_geojson,
         )
