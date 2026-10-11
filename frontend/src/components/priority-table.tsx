@@ -12,7 +12,11 @@ interface PriorityTableProps { settlements: Settlement[]; }
 
 export function PriorityTable({ settlements }: PriorityTableProps) {
   const { t } = useLanguage();
-  const sorted = [...settlements].sort((a, b) => b.priorityScore - a.priorityScore);
+  // Filter for cut-off settlements (strict + practical) and sort descending by priority
+  const cutOffs = settlements.filter((s) => s.status === "cut-off");
+  const sorted = [...(cutOffs.length > 0 ? cutOffs : settlements)].sort(
+    (a, b) => b.priorityScore - a.priorityScore
+  );
 
   const handleDownload = () => {
     const header = "Rank,Settlement,Population,Priority,Status\n";
@@ -63,7 +67,7 @@ export function PriorityTable({ settlements }: PriorityTableProps) {
               <TableCell>{s.population.toLocaleString()}</TableCell>
               <TableCell>
                 <div className="flex items-center gap-3">
-                  <Progress value={s.priorityScore * 100} className="h-2 w-24" />
+                  <Progress value={s.priorityScore > 1 ? s.priorityScore : s.priorityScore * 100} className="h-2 w-24" />
                   <span className="text-xs text-muted-foreground">{s.priorityScore.toFixed(2)}</span>
                 </div>
               </TableCell>
