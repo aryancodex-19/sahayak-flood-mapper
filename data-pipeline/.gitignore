@@ -1,0 +1,20 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Data files (bade hain — local pe rakho, GitHub pe mat bhejo)
+sar_data/*.tif
+sar_data/*.tiff
+
+# Chhoti files push karo
+!sar_data/*.geojson
+!sar_data/*.json
+
+# OS
+.DS_Store
+Thumbs.db
