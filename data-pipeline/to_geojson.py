@@ -11,7 +11,7 @@ import os
 import numpy as np
 
 OUT_DIR = 'sar_data'
-MASK = os.path.join(OUT_DIR, 'flood_mask_20220620.tif')
+MASK = os.path.join(OUT_DIR, 'flood_mask_20220620_filtered.tif')
 CONF = os.path.join(OUT_DIR, 'flood_confidence_20220620.tif')
 
 # ── 1. Read flood mask ───────────────────────────────
