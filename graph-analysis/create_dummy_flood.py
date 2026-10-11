@@ -72,25 +72,30 @@ def generate_dummy_flood_mask(
     # Initialize raster with 0 (no flood)
     raster = np.zeros((height, width), dtype=np.uint8)
 
-    # Place random rectangular patches
-    rng = np.random.default_rng(random_seed)
-    actual_patches = rng.integers(3, num_patches + 1) if num_patches >= 3 else num_patches
-    print(f"Generating {actual_patches} flooded rectangular patches...")
+    # 1. Main continuous meandering diagonal river zone (top-left to bottom-right)
+    # Modeling a large river corridor cutting across the region (~15-18% of total area)
+    river_half_width = 28
+    print(f"Generating main diagonal river corridor (width ~{river_half_width * 2} px)...")
+    for r in range(height):
+        t = r / height
+        # Smooth sinusoidal meander from top-left (col ~20) to bottom-right (col ~360)
+        c_center = t * width * 0.88 + 20 + 20 * np.sin(2.0 * np.pi * t)
+        c_min = max(0, int(c_center - river_half_width))
+        c_max = min(width, int(c_center + river_half_width))
+        raster[r, c_min:c_max] = 1
 
-    for i in range(actual_patches):
-        # Patch dimensions between 8% and 20% of raster size
-        patch_h = rng.integers(max(5, int(height * 0.08)), max(10, int(height * 0.20)))
-        patch_w = rng.integers(max(5, int(width * 0.08)), max(10, int(width * 0.20)))
+    # 2. Add 3-4 smaller strategic disconnected flood patches blocking key bridges/choke points
+    print("Adding strategic disconnected flood patches at major bridge crossings...")
+    bridge_patches = [
+        ("Western crossing (Kalitakuchi area)", slice(265, 300), slice(65, 105)),
+        ("Central junction bridge (Baihata area)", slice(200, 235), slice(275, 315)),
+        ("Eastern road bridge (Duminichowki area)", slice(195, 230), slice(365, 405)),
+        ("River embankment crossing (Amingaon area)", slice(355, 385), slice(235, 275)),
+    ]
 
-        # Random top-left corner
-        row_start = rng.integers(0, max(1, height - patch_h))
-        col_start = rng.integers(0, max(1, width - patch_w))
-
-        row_end = min(height, row_start + patch_h)
-        col_end = min(width, col_start + patch_w)
-
-        raster[row_start:row_end, col_start:col_end] = 1
-        print(f" - Patch {i+1}: rows [{row_start}:{row_end}], cols [{col_start}:{col_end}] ({row_end - row_start}x{col_end - col_start} px)")
+    for name, r_sl, c_sl in bridge_patches:
+        raster[r_sl, c_sl] = 1
+        print(f" - {name}: rows [{r_sl.start}:{r_sl.stop}], cols [{c_sl.start}:{c_sl.stop}]")
 
     flooded_pixels = int(np.sum(raster == 1))
     total_pixels = height * width
@@ -98,7 +103,7 @@ def generate_dummy_flood_mask(
 
     # Save to GeoTIFF using rasterio
     output_tif_path.parent.mkdir(parents=True, exist_ok=True)
-    print(f"Saving GeoTIFF to: {output_tif_path}...")
+    print(f"\nSaving GeoTIFF to: {output_tif_path}...")
     with rasterio.open(
         output_tif_path,
         "w",

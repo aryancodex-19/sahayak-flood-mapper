@@ -64,22 +64,6 @@
     "shortest_distance_meters": 9793.8
   },
   {
-    "id": 342100536,
-    "name": "Changsari",
-    "place_type": "village",
-    "latitude": 26.263269,
-    "longitude": 91.6963761,
-    "nearest_graph_node": 11986876750,
-    "nearest_service_center": {
-      "node": 9163886667,
-      "name": "KGMT HOSPITAL",
-      "type": "hospital",
-      "path_nodes_count": 37
-    },
-    "shortest_distance_km": 7.79,
-    "shortest_distance_meters": 7789.6
-  },
-  {
     "id": 566672795,
     "name": "Hajo",
     "place_type": "town",
@@ -128,22 +112,6 @@
     "shortest_distance_meters": 0
   },
   {
-    "id": 1339290393,
-    "name": "Baihata",
-    "place_type": "suburb",
-    "latitude": 26.3441702,
-    "longitude": 91.7262138,
-    "nearest_graph_node": 904878952,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 65
-    },
-    "shortest_distance_km": 16.62,
-    "shortest_distance_meters": 16619.2
-  },
-  {
     "id": 1351481042,
     "name": "Goreswar",
     "place_type": "town",
@@ -174,22 +142,6 @@
     },
     "shortest_distance_km": 0.0,
     "shortest_distance_meters": 0
-  },
-  {
-    "id": 1692837282,
-    "name": "Duminichowki",
-    "place_type": "village",
-    "latitude": 26.3502805,
-    "longitude": 91.8229091,
-    "nearest_graph_node": 10656775810,
-    "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 55
-    },
-    "shortest_distance_km": 19.69,
-    "shortest_distance_meters": 19690.6
   },
   {
     "id": 1698296623,
@@ -295,13 +247,13 @@
     "longitude": 91.8037641,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 5623038906,
@@ -311,13 +263,13 @@
     "longitude": 91.8206191,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 6160665840,
@@ -631,13 +583,13 @@
     "longitude": 91.8130252,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 6160885078,
@@ -711,13 +663,13 @@
     "longitude": 91.8292896,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 6160897372,
@@ -743,13 +695,13 @@
     "longitude": 91.8298545,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 6161163702,
@@ -807,13 +759,13 @@
     "longitude": 91.7998576,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 6161187087,
@@ -1207,13 +1159,13 @@
     "longitude": 91.8385701,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 6168664671,
@@ -1223,13 +1175,13 @@
     "longitude": 91.841936,
     "nearest_graph_node": 566703204,
     "nearest_service_center": {
-      "node": 10617684707,
-      "name": "Gate Hospitals",
-      "type": "hospital",
-      "path_nodes_count": 4
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 103
     },
-    "shortest_distance_km": 4.66,
-    "shortest_distance_meters": 4660.6
+    "shortest_distance_km": 31.72,
+    "shortest_distance_meters": 31719.1
   },
   {
     "id": 6168671977,
@@ -1290,10 +1242,10 @@
       "node": 10653438005,
       "name": "Swasti Hospital",
       "type": "hospital",
-      "path_nodes_count": 52
+      "path_nodes_count": 39
     },
-    "shortest_distance_km": 13.53,
-    "shortest_distance_meters": 13531.8
+    "shortest_distance_km": 11.4,
+    "shortest_distance_meters": 11398.1
   },
   {
     "id": 7159263816,
@@ -1360,22 +1312,6 @@
     "shortest_distance_meters": 15543.0
   },
   {
-    "id": 7159375989,
-    "name": "Ghograpar",
-    "place_type": "village",
-    "latitude": 26.4519781,
-    "longitude": 91.5286231,
-    "nearest_graph_node": 10577224635,
-    "nearest_service_center": {
-      "node": 10629518138,
-      "name": "nan",
-      "type": "hospital",
-      "path_nodes_count": 9
-    },
-    "shortest_distance_km": 6.26,
-    "shortest_distance_meters": 6262.1
-  },
-  {
     "id": 7159393392,
     "name": "Settlement_7159393392",
     "place_type": "village",
@@ -1422,38 +1358,6 @@
     },
     "shortest_distance_km": 0.0,
     "shortest_distance_meters": 0
-  },
-  {
-    "id": 9714359605,
-    "name": "Gandhi Basti",
-    "place_type": "suburb",
-    "latitude": 26.1815474,
-    "longitude": 91.7619396,
-    "nearest_graph_node": 4976595950,
-    "nearest_service_center": {
-      "node": 4976595860,
-      "name": "WINTROBE HOSPITAL",
-      "type": "hospital",
-      "path_nodes_count": 10
-    },
-    "shortest_distance_km": 1.19,
-    "shortest_distance_meters": 1188.2
-  },
-  {
-    "id": 11665940838,
-    "name": "Borka",
-    "place_type": "village",
-    "latitude": 26.2833341,
-    "longitude": 91.6655016,
-    "nearest_graph_node": 5001367009,
-    "nearest_service_center": {
-      "node": 4994313138,
-      "name": "nan",
-      "type": "hospital",
-      "path_nodes_count": 55
-    },
-    "shortest_distance_km": 11.59,
-    "shortest_distance_meters": 11587.8
   },
   {
     "id": 11669949212,
