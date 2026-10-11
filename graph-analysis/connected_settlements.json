@@ -1,0 +1,210 @@
+[
+  {
+    "id": 245748064,
+    "name": "Rangia",
+    "place_type": "town",
+    "latitude": 26.4444441,
+    "longitude": 91.6172816,
+    "nearest_graph_node": 4242479660,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 245748181,
+    "name": "Nalbari",
+    "place_type": "town",
+    "latitude": 26.445568,
+    "longitude": 91.4354335,
+    "nearest_graph_node": 10629518138,
+    "nearest_service_center": {
+      "node": 10629518138,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 342100536,
+    "name": "Changsari",
+    "place_type": "village",
+    "latitude": 26.263269,
+    "longitude": 91.6963761,
+    "nearest_graph_node": 11986876750,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 37
+    },
+    "shortest_distance_km": 7.79,
+    "shortest_distance_meters": 7789.6
+  },
+  {
+    "id": 566672795,
+    "name": "Hajo",
+    "place_type": "town",
+    "latitude": 26.2491886,
+    "longitude": 91.5265279,
+    "nearest_graph_node": 4992362826,
+    "nearest_service_center": {
+      "node": 4992362826,
+      "name": "Hajo",
+      "type": "nan",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 1351481042,
+    "name": "Goreswar",
+    "place_type": "town",
+    "latitude": 26.5282906,
+    "longitude": 91.7249869,
+    "nearest_graph_node": 5792353889,
+    "nearest_service_center": {
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 1380070099,
+    "name": "Sualkuchi",
+    "place_type": "town",
+    "latitude": 26.1699129,
+    "longitude": 91.5708517,
+    "nearest_graph_node": 10600687395,
+    "nearest_service_center": {
+      "node": 10600687395,
+      "name": "Sualkuchi",
+      "type": "nan",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 7017989704,
+    "name": "Tulsibari",
+    "place_type": "village",
+    "latitude": 26.5045214,
+    "longitude": 91.597889,
+    "nearest_graph_node": 5745787161,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 6
+    },
+    "shortest_distance_km": 7.18,
+    "shortest_distance_meters": 7178.0
+  },
+  {
+    "id": 7157275460,
+    "name": "Kamalpur",
+    "place_type": "village",
+    "latitude": 26.3484407,
+    "longitude": 91.6801679,
+    "nearest_graph_node": 5452016800,
+    "nearest_service_center": {
+      "node": 10653438005,
+      "name": "Swasti Hospital",
+      "type": "hospital",
+      "path_nodes_count": 52
+    },
+    "shortest_distance_km": 13.53,
+    "shortest_distance_meters": 13531.8
+  },
+  {
+    "id": 7159370809,
+    "name": "Kamarkuchi",
+    "place_type": "village",
+    "latitude": 26.3491137,
+    "longitude": 91.4800429,
+    "nearest_graph_node": 10628437746,
+    "nearest_service_center": {
+      "node": 10628307476,
+      "name": "Nalbari Multispeciality Hospital",
+      "type": "hospital",
+      "path_nodes_count": 44
+    },
+    "shortest_distance_km": 15.54,
+    "shortest_distance_meters": 15543.0
+  },
+  {
+    "id": 7159375989,
+    "name": "Ghograpar",
+    "place_type": "village",
+    "latitude": 26.4519781,
+    "longitude": 91.5286231,
+    "nearest_graph_node": 10577224635,
+    "nearest_service_center": {
+      "node": 10629518138,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 9
+    },
+    "shortest_distance_km": 6.26,
+    "shortest_distance_meters": 6262.1
+  },
+  {
+    "id": 7159393392,
+    "name": "Settlement_7159393392",
+    "place_type": "village",
+    "latitude": 26.3627266,
+    "longitude": 91.5435576,
+    "nearest_graph_node": 10635433934,
+    "nearest_service_center": {
+      "node": 10628307476,
+      "name": "Nalbari Multispeciality Hospital",
+      "type": "hospital",
+      "path_nodes_count": 24
+    },
+    "shortest_distance_km": 7.86,
+    "shortest_distance_meters": 7859.2
+  },
+  {
+    "id": 11665940838,
+    "name": "Borka",
+    "place_type": "village",
+    "latitude": 26.2833341,
+    "longitude": 91.6655016,
+    "nearest_graph_node": 5001367009,
+    "nearest_service_center": {
+      "node": 4994313138,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 55
+    },
+    "shortest_distance_km": 11.59,
+    "shortest_distance_meters": 11587.8
+  },
+  {
+    "id": 11669949212,
+    "name": "Sessamukh",
+    "place_type": "village",
+    "latitude": 26.2455805,
+    "longitude": 91.5864408,
+    "nearest_graph_node": 4992362587,
+    "nearest_service_center": {
+      "node": 4992362826,
+      "name": "Hajo",
+      "type": "nan",
+      "path_nodes_count": 46
+    },
+    "shortest_distance_km": 6.33,
+    "shortest_distance_meters": 6332.6
+  }
+]

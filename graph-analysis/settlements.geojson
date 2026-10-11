@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"name": "settlements",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "osmid": 245748064, "name": "Rangia", "place": "town" }, "geometry": { "type": "Point", "coordinates": [ 91.6172816, 26.4444441 ] } },
+{ "type": "Feature", "properties": { "osmid": 245748181, "name": "Nalbari", "place": "town" }, "geometry": { "type": "Point", "coordinates": [ 91.4354335, 26.445568 ] } },
+{ "type": "Feature", "properties": { "osmid": 342100536, "name": "Changsari", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.6963761, 26.263269 ] } },
+{ "type": "Feature", "properties": { "osmid": 566672795, "name": "Hajo", "place": "town" }, "geometry": { "type": "Point", "coordinates": [ 91.5265279, 26.2491886 ] } },
+{ "type": "Feature", "properties": { "osmid": 1351481042, "name": "Goreswar", "place": "town" }, "geometry": { "type": "Point", "coordinates": [ 91.7249869, 26.5282906 ] } },
+{ "type": "Feature", "properties": { "osmid": 1380070099, "name": "Sualkuchi", "place": "town" }, "geometry": { "type": "Point", "coordinates": [ 91.5708517, 26.1699129 ] } },
+{ "type": "Feature", "properties": { "osmid": 2885039364, "name": "Kalitakuchi", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.5133347, 26.2740378 ] } },
+{ "type": "Feature", "properties": { "osmid": 7017989704, "name": "Tulsibari", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.597889, 26.5045214 ] } },
+{ "type": "Feature", "properties": { "osmid": 7157275460, "name": "Kamalpur", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.6801679, 26.3484407 ] } },
+{ "type": "Feature", "properties": { "osmid": 7159370809, "name": "Kamarkuchi", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.4800429, 26.3491137 ] } },
+{ "type": "Feature", "properties": { "osmid": 7159375989, "name": "Ghograpar", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.5286231, 26.4519781 ] } },
+{ "type": "Feature", "properties": { "osmid": 7159393392, "name": "Settlement_7159393392", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.5435576, 26.3627266 ] } },
+{ "type": "Feature", "properties": { "osmid": 11665940838, "name": "Borka", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.6655016, 26.2833341 ] } },
+{ "type": "Feature", "properties": { "osmid": 11669949212, "name": "Sessamukh", "place": "village" }, "geometry": { "type": "Point", "coordinates": [ 91.5864408, 26.2455805 ] } }
+]
+}
