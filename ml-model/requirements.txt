@@ -1,0 +1,30 @@
+# SAHAYAK - ML Model Dependencies (Python 3.11+)
+# -------------------------------------------------------------
+# NOTE ON PYTORCH & CUDA:
+# Standard PyPI 'pip install torch' might default to CPU or a generic build.
+# For CUDA-accelerated training/inference on Windows NVIDIA GPU, install PyTorch
+# first using the dedicated PyTorch index, for example:
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# -------------------------------------------------------------
+
+# Deep Learning Framework
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Pretrained Segmentation Architectures (U-Net, ResNet34 encoder)
+segmentation-models-pytorch>=0.3.3
+
+# Geospatial Raster I/O (GeoTIFF reading, writing, CRS, Affine transform)
+rasterio>=1.3.8
+
+# Numerical Computing & Data Handling
+numpy>=1.24.0,<2.1.0
+pandas>=2.0.0
+
+# Image Augmentations & Transforms
+albumentations>=1.3.1
+
+# Visualization & Progress Tracking
+matplotlib>=3.7.0
+tqdm>=4.66.0
+scikit-learn>=1.3.0
