@@ -1,8 +1,8 @@
 rank,name,type,population_est,lat,lon,score,category,reason
-1,Baihata,suburb,3000,26.3441702,91.7262138,73.41,High,Cut off from all service centers; estimated population 3000; nearest service center 15.99km away
-2,Gandhi Basti,suburb,3000,26.1815474,91.7619396,64.08,High,Cut off from all service centers; estimated population 3000; nearest service center 1.19km away
-3,Duminichowki,village,800,26.3502805,91.8229091,57.42,Medium,Cut off from all service centers; estimated population 800; nearest service center 19.69km away
-4,Borka,village,800,26.2833341,91.6655016,52.49,Medium,Cut off from all service centers; estimated population 800; nearest service center 11.88km away
-5,Changsari,village,800,26.263269,91.6963761,49.91,Medium,Cut off from all service centers; estimated population 800; nearest service center 7.79km away
-6,Ghograpar,village,800,26.4519781,91.5286231,48.95,Medium,Cut off from all service centers; estimated population 800; nearest service center 6.26km away
-7,Kalitakuchi,village,800,26.2740378,91.5133347,47.32,Medium,Cut off from all service centers; estimated population 800; nearest service center 3.68km away
+1,Baihata,suburb,3000,26.3441702,91.7262138,79.57,High,Cut off from all service centers; estimated population 3000; nearest service center 15.99km away
+2,Duminichowki,village,800,26.3502805,91.8229091,65.0,High,Cut off from all service centers; estimated population 800; nearest service center 19.69km away
+3,Gandhi Basti,suburb,3000,26.1815474,91.7619396,64.54,High,Cut off from all service centers; estimated population 3000; nearest service center 1.19km away
+4,Borka,village,800,26.2833341,91.6655016,57.07,Medium,Cut off from all service centers; estimated population 800; nearest service center 11.88km away
+5,Changsari,village,800,26.263269,91.6963761,52.91,Medium,Cut off from all service centers; estimated population 800; nearest service center 7.79km away
+6,Ghograpar,village,800,26.4519781,91.5286231,51.36,Medium,Cut off from all service centers; estimated population 800; nearest service center 6.26km away
+7,Kalitakuchi,village,800,26.2740378,91.5133347,48.73,Medium,Cut off from all service centers; estimated population 800; nearest service center 3.68km away

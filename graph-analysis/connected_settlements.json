@@ -6,14 +6,18 @@
     "latitude": 26.4444441,
     "longitude": 91.6172816,
     "nearest_graph_node": 4242479660,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 245748181,
@@ -22,14 +26,18 @@
     "latitude": 26.445568,
     "longitude": 91.4354335,
     "nearest_graph_node": 10629518138,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10629518138,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 245748425,
@@ -38,14 +46,18 @@
     "latitude": 26.4516652,
     "longitude": 91.8803712,
     "nearest_graph_node": 10618430283,
+    "pre_flood_distance_km": 14.48,
+    "post_flood_distance_km": 14.48,
+    "shortest_distance_km": 14.48,
+    "shortest_distance_meters": 14483.1,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 5792353889,
       "name": "Goreswar",
       "type": "nan",
       "path_nodes_count": 36
-    },
-    "shortest_distance_km": 14.48,
-    "shortest_distance_meters": 14483.1
+    }
   },
   {
     "id": 245749553,
@@ -54,14 +66,18 @@
     "latitude": 26.5594067,
     "longitude": 91.4793749,
     "nearest_graph_node": 5745787214,
+    "pre_flood_distance_km": 9.79,
+    "post_flood_distance_km": 9.79,
+    "shortest_distance_km": 9.79,
+    "shortest_distance_meters": 9793.8,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 7
-    },
-    "shortest_distance_km": 9.79,
-    "shortest_distance_meters": 9793.8
+    }
   },
   {
     "id": 566672795,
@@ -70,14 +86,18 @@
     "latitude": 26.2491886,
     "longitude": 91.5265279,
     "nearest_graph_node": 4992362826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4992362826,
       "name": "Hajo",
       "type": "nan",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 566672797,
@@ -86,14 +106,18 @@
     "latitude": 26.1409355,
     "longitude": 91.7910265,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 566672798,
@@ -102,14 +126,18 @@
     "latitude": 26.0993157,
     "longitude": 91.8773204,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 1351481042,
@@ -118,14 +146,18 @@
     "latitude": 26.5282906,
     "longitude": 91.7249869,
     "nearest_graph_node": 5792353889,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 5792353889,
       "name": "Goreswar",
       "type": "nan",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 1380070099,
@@ -134,14 +166,18 @@
     "latitude": 26.1699129,
     "longitude": 91.5708517,
     "nearest_graph_node": 10600687395,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10600687395,
       "name": "Sualkuchi",
       "type": "nan",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 1698296623,
@@ -150,14 +186,18 @@
     "latitude": 26.1799322,
     "longitude": 91.7362163,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 1698296637,
@@ -166,14 +206,18 @@
     "latitude": 26.1664476,
     "longitude": 91.7063761,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 2385333812,
@@ -182,14 +226,18 @@
     "latitude": 26.6042737,
     "longitude": 91.8146519,
     "nearest_graph_node": 5792353889,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 5792353889,
       "name": "Goreswar",
       "type": "nan",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 2885039361,
@@ -198,14 +246,18 @@
     "latitude": 26.1861581,
     "longitude": 91.6699507,
     "nearest_graph_node": 10613387930,
+    "pre_flood_distance_km": 15.22,
+    "post_flood_distance_km": 15.22,
+    "shortest_distance_km": 15.22,
+    "shortest_distance_meters": 15223.5,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10600687395,
       "name": "Sualkuchi",
       "type": "nan",
       "path_nodes_count": 57
-    },
-    "shortest_distance_km": 15.22,
-    "shortest_distance_meters": 15223.5
+    }
   },
   {
     "id": 3677614769,
@@ -214,14 +266,18 @@
     "latitude": 26.6108401,
     "longitude": 91.5761562,
     "nearest_graph_node": 904880997,
+    "pre_flood_distance_km": 12.84,
+    "post_flood_distance_km": 12.84,
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 12
-    },
-    "shortest_distance_km": 12.84,
-    "shortest_distance_meters": 12836.7
+    }
   },
   {
     "id": 5623038879,
@@ -230,46 +286,18 @@
     "latitude": 26.1915072,
     "longitude": 91.7184377,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
-  },
-  {
-    "id": 5623038882,
-    "name": "Sunchali",
-    "place_type": "suburb",
-    "latitude": 26.2040027,
-    "longitude": 91.8037641,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
-  },
-  {
-    "id": 5623038906,
-    "name": "Kurua",
-    "place_type": "village",
-    "latitude": 26.2376126,
-    "longitude": 91.8206191,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
+    }
   },
   {
     "id": 6160665840,
@@ -278,14 +306,18 @@
     "latitude": 26.1112218,
     "longitude": 91.7491912,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160665841,
@@ -294,14 +326,18 @@
     "latitude": 26.1234509,
     "longitude": 91.748763,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160665842,
@@ -310,14 +346,18 @@
     "latitude": 26.1277952,
     "longitude": 91.7488595,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160665852,
@@ -326,14 +366,18 @@
     "latitude": 26.130561,
     "longitude": 91.7354268,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160665853,
@@ -342,14 +386,18 @@
     "latitude": 26.136674,
     "longitude": 91.7367855,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160665854,
@@ -358,14 +406,18 @@
     "latitude": 26.1449422,
     "longitude": 91.7391236,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160665855,
@@ -374,14 +426,18 @@
     "latitude": 26.1415953,
     "longitude": 91.7432469,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160665857,
@@ -390,14 +446,18 @@
     "latitude": 26.1401629,
     "longitude": 91.7510039,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160729422,
@@ -406,14 +466,18 @@
     "latitude": 26.1445994,
     "longitude": 91.7718397,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160729426,
@@ -422,14 +486,18 @@
     "latitude": 26.1325731,
     "longitude": 91.7796601,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160749663,
@@ -438,14 +506,18 @@
     "latitude": 26.1180819,
     "longitude": 91.7854832,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160749671,
@@ -454,14 +526,18 @@
     "latitude": 26.1118766,
     "longitude": 91.7885229,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160803210,
@@ -470,14 +546,18 @@
     "latitude": 26.1309933,
     "longitude": 91.8071854,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160810152,
@@ -486,14 +566,18 @@
     "latitude": 26.1237215,
     "longitude": 91.7990993,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160810227,
@@ -502,14 +586,18 @@
     "latitude": 26.1577574,
     "longitude": 91.7887736,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160810292,
@@ -518,14 +606,18 @@
     "latitude": 26.1121506,
     "longitude": 91.7977943,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160815872,
@@ -534,14 +626,18 @@
     "latitude": 26.1691174,
     "longitude": 91.7827667,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160816885,
@@ -550,14 +646,18 @@
     "latitude": 26.1753871,
     "longitude": 91.7774522,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160817648,
@@ -566,30 +666,18 @@
     "latitude": 26.1841165,
     "longitude": 91.7740906,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
-  },
-  {
-    "id": 6160818822,
-    "name": "Noonmati Refinery",
-    "place_type": "suburb",
-    "latitude": 26.1836349,
-    "longitude": 91.8130252,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
+    }
   },
   {
     "id": 6160885078,
@@ -598,14 +686,18 @@
     "latitude": 26.1508008,
     "longitude": 91.8037298,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160885941,
@@ -614,14 +706,18 @@
     "latitude": 26.149571,
     "longitude": 91.7850121,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160886152,
@@ -630,14 +726,18 @@
     "latitude": 26.165473,
     "longitude": 91.7695629,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6160888960,
@@ -646,30 +746,18 @@
     "latitude": 26.1849139,
     "longitude": 91.756824,
     "nearest_graph_node": 4976595860,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4976595860,
       "name": "WINTROBE HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
-  },
-  {
-    "id": 6160896263,
-    "name": "নাৰেঙ্গী",
-    "place_type": "suburb",
-    "latitude": 26.1762413,
-    "longitude": 91.8292896,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
+    }
   },
   {
     "id": 6160897372,
@@ -678,30 +766,18 @@
     "latitude": 26.1741894,
     "longitude": 91.7937356,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
-  },
-  {
-    "id": 6160897853,
-    "name": "Pathar Quarry",
-    "place_type": "suburb",
-    "latitude": 26.1684939,
-    "longitude": 91.8298545,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
+    }
   },
   {
     "id": 6161163702,
@@ -710,14 +786,18 @@
     "latitude": 26.1554983,
     "longitude": 91.671224,
     "nearest_graph_node": 10613387930,
+    "pre_flood_distance_km": 15.22,
+    "post_flood_distance_km": 15.22,
+    "shortest_distance_km": 15.22,
+    "shortest_distance_meters": 15223.5,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10600687395,
       "name": "Sualkuchi",
       "type": "nan",
       "path_nodes_count": 57
-    },
-    "shortest_distance_km": 15.22,
-    "shortest_distance_meters": 15223.5
+    }
   },
   {
     "id": 6161184929,
@@ -726,14 +806,18 @@
     "latitude": 26.1579771,
     "longitude": 91.8090488,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6161186018,
@@ -742,30 +826,18 @@
     "latitude": 26.1759804,
     "longitude": 91.811193,
     "nearest_graph_node": 10617684707,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10617684707,
       "name": "Gate Hospitals",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
-  },
-  {
-    "id": 6161187086,
-    "name": "Noonmati",
-    "place_type": "suburb",
-    "latitude": 26.1979372,
-    "longitude": 91.7998576,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
+    }
   },
   {
     "id": 6161187087,
@@ -774,14 +846,18 @@
     "latitude": 26.1845663,
     "longitude": 91.7539777,
     "nearest_graph_node": 4976595860,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4976595860,
       "name": "WINTROBE HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6161187286,
@@ -790,14 +866,18 @@
     "latitude": 26.1843424,
     "longitude": 91.7630711,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6161187904,
@@ -806,14 +886,18 @@
     "latitude": 26.1853214,
     "longitude": 91.7472508,
     "nearest_graph_node": 4976595860,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4976595860,
       "name": "WINTROBE HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6161189285,
@@ -822,14 +906,18 @@
     "latitude": 26.1755052,
     "longitude": 91.734023,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6161189988,
@@ -838,14 +926,18 @@
     "latitude": 26.1716385,
     "longitude": 91.7292129,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6161196685,
@@ -854,14 +946,18 @@
     "latitude": 26.1611819,
     "longitude": 91.7522351,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163737300,
@@ -870,14 +966,18 @@
     "latitude": 26.1794742,
     "longitude": 91.7525068,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163738316,
@@ -886,14 +986,18 @@
     "latitude": 26.1808827,
     "longitude": 91.7824864,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163741920,
@@ -902,14 +1006,18 @@
     "latitude": 26.1659951,
     "longitude": 91.7275191,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163762077,
@@ -918,14 +1026,18 @@
     "latitude": 26.1100577,
     "longitude": 91.7605013,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163766750,
@@ -934,14 +1046,18 @@
     "latitude": 26.1177701,
     "longitude": 91.7933853,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163776904,
@@ -950,14 +1066,18 @@
     "latitude": 26.125094,
     "longitude": 91.810908,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163779126,
@@ -966,14 +1086,18 @@
     "latitude": 26.1409862,
     "longitude": 91.7954856,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163780722,
@@ -982,14 +1106,18 @@
     "latitude": 26.1348495,
     "longitude": 91.7924167,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6163787851,
@@ -998,14 +1126,18 @@
     "latitude": 26.1600453,
     "longitude": 91.6958086,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168594201,
@@ -1014,14 +1146,18 @@
     "latitude": 26.1852211,
     "longitude": 91.7886629,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168597952,
@@ -1030,14 +1166,18 @@
     "latitude": 26.175003,
     "longitude": 91.7576927,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168646060,
@@ -1046,14 +1186,18 @@
     "latitude": 26.1691075,
     "longitude": 91.7401827,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168654474,
@@ -1062,14 +1206,18 @@
     "latitude": 26.1702255,
     "longitude": 91.751208,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168655878,
@@ -1078,14 +1226,18 @@
     "latitude": 26.1582623,
     "longitude": 91.7344457,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168657391,
@@ -1094,14 +1246,18 @@
     "latitude": 26.1967021,
     "longitude": 91.7640008,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168658413,
@@ -1110,14 +1266,18 @@
     "latitude": 26.1502556,
     "longitude": 91.7291425,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168663966,
@@ -1126,14 +1286,18 @@
     "latitude": 26.1541815,
     "longitude": 91.7796261,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6168664036,
@@ -1142,46 +1306,18 @@
     "latitude": 26.1576559,
     "longitude": 91.7706055,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
-  },
-  {
-    "id": 6168664670,
-    "name": "Satgaon",
-    "place_type": "suburb",
-    "latitude": 26.158949,
-    "longitude": 91.8385701,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
-  },
-  {
-    "id": 6168664671,
-    "name": "Bonda Gaon",
-    "place_type": "suburb",
-    "latitude": 26.1806993,
-    "longitude": 91.841936,
-    "nearest_graph_node": 566703204,
-    "nearest_service_center": {
-      "node": 5792353889,
-      "name": "Goreswar",
-      "type": "nan",
-      "path_nodes_count": 103
-    },
-    "shortest_distance_km": 31.72,
-    "shortest_distance_meters": 31719.1
+    }
   },
   {
     "id": 6168671977,
@@ -1190,14 +1326,18 @@
     "latitude": 26.1673224,
     "longitude": 91.7731606,
     "nearest_graph_node": 4976595860,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4976595860,
       "name": "WINTROBE HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 6884791085,
@@ -1206,14 +1346,18 @@
     "latitude": 26.1810484,
     "longitude": 91.750173,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 7017989704,
@@ -1222,14 +1366,18 @@
     "latitude": 26.5045214,
     "longitude": 91.597889,
     "nearest_graph_node": 5745787161,
+    "pre_flood_distance_km": 7.18,
+    "post_flood_distance_km": 7.18,
+    "shortest_distance_km": 7.18,
+    "shortest_distance_meters": 7178.0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 6
-    },
-    "shortest_distance_km": 7.18,
-    "shortest_distance_meters": 7178.0
+    }
   },
   {
     "id": 7157275460,
@@ -1238,14 +1386,18 @@
     "latitude": 26.3484407,
     "longitude": 91.6801679,
     "nearest_graph_node": 5452016800,
+    "pre_flood_distance_km": 11.4,
+    "post_flood_distance_km": 11.4,
+    "shortest_distance_km": 11.4,
+    "shortest_distance_meters": 11398.1,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10653438005,
       "name": "Swasti Hospital",
       "type": "hospital",
       "path_nodes_count": 39
-    },
-    "shortest_distance_km": 11.4,
-    "shortest_distance_meters": 11398.1
+    }
   },
   {
     "id": 7159263816,
@@ -1254,14 +1406,18 @@
     "latitude": 26.1211108,
     "longitude": 91.6164279,
     "nearest_graph_node": 4976870788,
+    "pre_flood_distance_km": 1.57,
+    "post_flood_distance_km": 1.57,
+    "shortest_distance_km": 1.57,
+    "shortest_distance_meters": 1569.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10600687395,
       "name": "Sualkuchi",
       "type": "nan",
       "path_nodes_count": 19
-    },
-    "shortest_distance_km": 1.57,
-    "shortest_distance_meters": 1569.7
+    }
   },
   {
     "id": 7159263817,
@@ -1270,14 +1426,18 @@
     "latitude": 26.1206485,
     "longitude": 91.4521694,
     "nearest_graph_node": 10601107686,
+    "pre_flood_distance_km": 9.88,
+    "post_flood_distance_km": 9.88,
+    "shortest_distance_km": 9.88,
+    "shortest_distance_meters": 9876.9,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10600687395,
       "name": "Sualkuchi",
       "type": "nan",
       "path_nodes_count": 59
-    },
-    "shortest_distance_km": 9.88,
-    "shortest_distance_meters": 9876.9
+    }
   },
   {
     "id": 7159365222,
@@ -1286,14 +1446,18 @@
     "latitude": 26.4648873,
     "longitude": 91.3905429,
     "nearest_graph_node": 10629518138,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10629518138,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 7159370809,
@@ -1302,14 +1466,18 @@
     "latitude": 26.3491137,
     "longitude": 91.4800429,
     "nearest_graph_node": 10628437746,
+    "pre_flood_distance_km": 11.48,
+    "post_flood_distance_km": 15.54,
+    "shortest_distance_km": 15.54,
+    "shortest_distance_meters": 15543.0,
+    "detour_ratio": 1.35,
+    "extra_distance_km": 4.07,
     "nearest_service_center": {
       "node": 10628307476,
       "name": "Nalbari Multispeciality Hospital",
       "type": "hospital",
       "path_nodes_count": 44
-    },
-    "shortest_distance_km": 15.54,
-    "shortest_distance_meters": 15543.0
+    }
   },
   {
     "id": 7159393392,
@@ -1318,14 +1486,18 @@
     "latitude": 26.3627266,
     "longitude": 91.5435576,
     "nearest_graph_node": 10635433934,
+    "pre_flood_distance_km": 7.86,
+    "post_flood_distance_km": 7.86,
+    "shortest_distance_km": 7.86,
+    "shortest_distance_meters": 7859.2,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10628307476,
       "name": "Nalbari Multispeciality Hospital",
       "type": "hospital",
       "path_nodes_count": 24
-    },
-    "shortest_distance_km": 7.86,
-    "shortest_distance_meters": 7859.2
+    }
   },
   {
     "id": 8041812492,
@@ -1334,14 +1506,18 @@
     "latitude": 26.1206544,
     "longitude": 91.7788451,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 8325113487,
@@ -1350,14 +1526,18 @@
     "latitude": 26.1212939,
     "longitude": 91.7700729,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 11669949212,
@@ -1366,14 +1546,18 @@
     "latitude": 26.2455805,
     "longitude": 91.5864408,
     "nearest_graph_node": 4992362587,
+    "pre_flood_distance_km": 6.33,
+    "post_flood_distance_km": 6.33,
+    "shortest_distance_km": 6.33,
+    "shortest_distance_meters": 6332.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4992362826,
       "name": "Hajo",
       "type": "nan",
       "path_nodes_count": 46
-    },
-    "shortest_distance_km": 6.33,
-    "shortest_distance_meters": 6332.6
+    }
   },
   {
     "id": 12051475377,
@@ -1382,14 +1566,18 @@
     "latitude": 26.5900622,
     "longitude": 91.5003848,
     "nearest_graph_node": 904880997,
+    "pre_flood_distance_km": 12.84,
+    "post_flood_distance_km": 12.84,
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 12
-    },
-    "shortest_distance_km": 12.84,
-    "shortest_distance_meters": 12836.7
+    }
   },
   {
     "id": 12051475378,
@@ -1398,14 +1586,18 @@
     "latitude": 26.5953197,
     "longitude": 91.492188,
     "nearest_graph_node": 904880997,
+    "pre_flood_distance_km": 12.84,
+    "post_flood_distance_km": 12.84,
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 12
-    },
-    "shortest_distance_km": 12.84,
-    "shortest_distance_meters": 12836.7
+    }
   },
   {
     "id": 12051475379,
@@ -1414,14 +1606,18 @@
     "latitude": 26.6231378,
     "longitude": 91.461482,
     "nearest_graph_node": 904880997,
+    "pre_flood_distance_km": 12.84,
+    "post_flood_distance_km": 12.84,
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 12
-    },
-    "shortest_distance_km": 12.84,
-    "shortest_distance_meters": 12836.7
+    }
   },
   {
     "id": 12051475398,
@@ -1430,14 +1626,18 @@
     "latitude": 26.589122,
     "longitude": 91.4858794,
     "nearest_graph_node": 904880997,
+    "pre_flood_distance_km": 12.84,
+    "post_flood_distance_km": 12.84,
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 12
-    },
-    "shortest_distance_km": 12.84,
-    "shortest_distance_meters": 12836.7
+    }
   },
   {
     "id": 12051475399,
@@ -1446,14 +1646,18 @@
     "latitude": 26.6071576,
     "longitude": 91.4828539,
     "nearest_graph_node": 904880997,
+    "pre_flood_distance_km": 12.84,
+    "post_flood_distance_km": 12.84,
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 12
-    },
-    "shortest_distance_km": 12.84,
-    "shortest_distance_meters": 12836.7
+    }
   },
   {
     "id": 12051475400,
@@ -1462,14 +1666,18 @@
     "latitude": 26.6151,
     "longitude": 91.4833259,
     "nearest_graph_node": 904880997,
+    "pre_flood_distance_km": 12.84,
+    "post_flood_distance_km": 12.84,
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4242479660,
       "name": "Rangia",
       "type": "nan",
       "path_nodes_count": 12
-    },
-    "shortest_distance_km": 12.84,
-    "shortest_distance_meters": 12836.7
+    }
   },
   {
     "id": 12082230957,
@@ -1478,14 +1686,18 @@
     "latitude": 26.1634597,
     "longitude": 91.6806078,
     "nearest_graph_node": 10613387930,
+    "pre_flood_distance_km": 15.22,
+    "post_flood_distance_km": 15.22,
+    "shortest_distance_km": 15.22,
+    "shortest_distance_meters": 15223.5,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 10600687395,
       "name": "Sualkuchi",
       "type": "nan",
       "path_nodes_count": 57
-    },
-    "shortest_distance_km": 15.22,
-    "shortest_distance_meters": 15223.5
+    }
   },
   {
     "id": 12082267422,
@@ -1494,14 +1706,18 @@
     "latitude": 26.1516147,
     "longitude": 91.6997373,
     "nearest_graph_node": 4993947047,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 4993947047,
       "name": "Sanjevani Hospital",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 12847009719,
@@ -1510,14 +1726,18 @@
     "latitude": 26.13692,
     "longitude": 91.7555192,
     "nearest_graph_node": 7085611836,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611836,
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 14191593758,
@@ -1526,14 +1746,18 @@
     "latitude": 26.1391159,
     "longitude": 91.790114,
     "nearest_graph_node": 7085611826,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 7085611826,
       "name": "nan",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   },
   {
     "id": 14208153161,
@@ -1542,13 +1766,17 @@
     "latitude": 26.1919617,
     "longitude": 91.755303,
     "nearest_graph_node": 9163886667,
+    "pre_flood_distance_km": 0.0,
+    "post_flood_distance_km": 0.0,
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
       "node": 9163886667,
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
-    },
-    "shortest_distance_km": 0.0,
-    "shortest_distance_meters": 0
+    }
   }
 ]

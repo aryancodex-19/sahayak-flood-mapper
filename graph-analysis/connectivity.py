@@ -15,6 +15,14 @@ import networkx as nx
 import osmnx as ox
 from shapely.geometry import Point
 
+# Ensure UTF-8 output encoding on Windows console
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 
 # Configure OSMnx settings
 ox.settings.use_cache = True
@@ -259,6 +267,7 @@ def analyze_flood_connectivity(
     output_dir: Path = None,
     place_name: str = "Kamrup, Assam, India",
     force_refresh_settlements: bool = False,
+    detour_threshold: float = 3.0,
 ) -> Dict[str, Any]:
     """
     Removes flooded road edges from the road graph and analyzes path reachability
@@ -275,6 +284,7 @@ def analyze_flood_connectivity(
     output_dir.mkdir(parents=True, exist_ok=True)
     connected_output_file = output_dir / "connected_settlements.json"
     cutoff_output_file = output_dir / "cut_off_settlements.json"
+    practical_output_file = output_dir / "practical_cut_off_settlements.json"
 
     # 1. Load road network
     if not graph_path.exists():
@@ -338,14 +348,17 @@ def analyze_flood_connectivity(
             json.dump([], f, indent=2)
         with open(cutoff_output_file, "w", encoding="utf-8") as f:
             json.dump([], f, indent=2)
+        with open(practical_output_file, "w", encoding="utf-8") as f:
+            json.dump([], f, indent=2)
 
         return {
             "total_settlements": 0,
             "connected_count": 0,
-            "cutoff_count": 0,
-            "pct_cutoff": 0.0,
+            "strict_cutoff_count": 0,
+            "practical_cutoff_count": 0,
             "connected_file": connected_output_file,
             "cutoff_file": cutoff_output_file,
+            "practical_cutoff_file": practical_output_file,
         }
 
     # Extract centroids
@@ -370,12 +383,15 @@ def analyze_flood_connectivity(
     # Map settlements to nearest graph nodes
     st_node_ids = ox.nearest_nodes(G, [p.x for p in st_points], [p.y for p in st_points])
 
-    # 6. Evaluate connectivity using networkx.has_path & shortest_path
-    print("Evaluating path connectivity to service centers for each settlement...")
+    # 6. Evaluate connectivity (Strict vs Practical vs Connected)
+    print("Evaluating pre-flood vs post-flood reachability to service centers...")
     connected_settlements = []
-    cutoff_settlements = []
+    strict_cutoff_settlements = []
+    practical_cutoff_settlements = []
+    skipped_settlements = []
 
     service_node_list = list(sc_node_map.keys())
+    detour_threshold = float(detour_threshold if detour_threshold is not None else 3.0)
 
     for idx, (st_node, row) in enumerate(zip(st_node_ids, st_gdf.itertuples())):
         st_id = getattr(row, "osmid", idx)
@@ -393,85 +409,143 @@ def analyze_flood_connectivity(
             "nearest_graph_node": int(st_node),
         }
 
-        if st_node not in G_flood or not service_node_list:
-            settlement_entry["reason"] = "Node isolated or no service centers reachable"
-            cutoff_settlements.append(settlement_entry)
+        # Step A: Evaluate pre-flood shortest path on original G
+        if st_node not in G or not service_node_list:
+            skipped_settlements.append(st_name)
             continue
 
-        best_distance = float("inf")
-        nearest_sc_info = None
-
-        # Efficient single Dijkstra traversal per settlement to all reachable nodes
         try:
-            lengths, paths = nx.single_source_dijkstra(G_flood, source=st_node, weight="length")
-            for sc_node in service_node_list:
-                if sc_node in lengths and lengths[sc_node] < best_distance:
-                    best_distance = lengths[sc_node]
-                    nearest_sc_info = {
-                        "node": int(sc_node),
-                        "name": sc_node_map[sc_node]["name"],
-                        "type": sc_node_map[sc_node]["type"],
-                        "path_nodes_count": len(paths[sc_node]),
-                    }
+            orig_lengths, orig_paths = nx.single_source_dijkstra(G, source=st_node, weight="length")
+            valid_sc_orig = [sc for sc in service_node_list if sc in orig_lengths]
+            if not valid_sc_orig:
+                # No path even before flood, skip settlement
+                skipped_settlements.append(st_name)
+                continue
+            best_orig_sc = min(valid_sc_orig, key=lambda sc: orig_lengths[sc])
+            pre_flood_dist = orig_lengths[best_orig_sc]
         except (nx.NetworkXNoPath, nx.NodeNotFound):
-            pass
-        except Exception:
-            pass
+            skipped_settlements.append(st_name)
+            continue
 
-        if nearest_sc_info is not None:
-            dist_km = round(best_distance / 1000.0, 2)
-            settlement_entry["nearest_service_center"] = nearest_sc_info
-            settlement_entry["shortest_distance_km"] = dist_km
-            settlement_entry["shortest_distance_meters"] = round(best_distance, 1)
-            connected_settlements.append(settlement_entry)
+        # Step B: Evaluate post-flood shortest path on G_flood
+        if st_node not in G_flood:
+            # Node completely removed or isolated
+            settlement_entry["reason"] = "Strict cut-off: settlement node isolated by flood"
+            settlement_entry["pre_flood_distance_km"] = round(pre_flood_dist / 1000.0, 2)
+            strict_cutoff_settlements.append(settlement_entry)
+            continue
+
+        try:
+            flood_lengths, flood_paths = nx.single_source_dijkstra(G_flood, source=st_node, weight="length")
+            valid_sc_flood = [sc for sc in service_node_list if sc in flood_lengths]
+            if not valid_sc_flood:
+                # Strict cut-off: no path exists to ANY service center
+                settlement_entry["reason"] = "Strict cut-off: all road routes to service centers submerged"
+                settlement_entry["pre_flood_distance_km"] = round(pre_flood_dist / 1000.0, 2)
+                strict_cutoff_settlements.append(settlement_entry)
+                continue
+
+            best_flood_sc = min(valid_sc_flood, key=lambda sc: flood_lengths[sc])
+            post_flood_dist = flood_lengths[best_flood_sc]
+            post_flood_path = flood_paths[best_flood_sc]
+        except (nx.NetworkXNoPath, nx.NodeNotFound):
+            settlement_entry["reason"] = "Strict cut-off: all road routes to service centers submerged"
+            settlement_entry["pre_flood_distance_km"] = round(pre_flood_dist / 1000.0, 2)
+            strict_cutoff_settlements.append(settlement_entry)
+            continue
+
+        # Step C: Compare post-flood distance vs pre-flood distance
+        if pre_flood_dist == 0.0:
+            detour_ratio = 1.0 if post_flood_dist == 0.0 else 999.0
         else:
-            settlement_entry["reason"] = "All road routes to service centers submerged"
-            cutoff_settlements.append(settlement_entry)
+            detour_ratio = post_flood_dist / pre_flood_dist
 
-    # 7. Output results to JSON
+        extra_km = max(0.0, (post_flood_dist - pre_flood_dist) / 1000.0)
+        nearest_sc_info = {
+            "node": int(best_flood_sc),
+            "name": sc_node_map[best_flood_sc]["name"],
+            "type": sc_node_map[best_flood_sc]["type"],
+            "path_nodes_count": len(post_flood_path),
+        }
+
+        settlement_entry["pre_flood_distance_km"] = round(pre_flood_dist / 1000.0, 2)
+        settlement_entry["post_flood_distance_km"] = round(post_flood_dist / 1000.0, 2)
+        settlement_entry["shortest_distance_km"] = round(post_flood_dist / 1000.0, 2)
+        settlement_entry["shortest_distance_meters"] = round(post_flood_dist, 1)
+        settlement_entry["detour_ratio"] = round(detour_ratio, 2)
+        settlement_entry["extra_distance_km"] = round(extra_km, 2)
+        settlement_entry["nearest_service_center"] = nearest_sc_info
+
+        # Step D: Classify
+        if detour_ratio >= detour_threshold:
+            # Practical cut-off: distance at least tripled
+            settlement_entry["reason"] = (
+                f"Practical cut-off: road distance increased by {detour_ratio:.2f}x "
+                f"(+{extra_km:.2f}km detour to {nearest_sc_info['name']})"
+            )
+            practical_cutoff_settlements.append(settlement_entry)
+        else:
+            # Connected: distance did not triple
+            connected_settlements.append(settlement_entry)
+
+    # 7. Output results to JSON files
+    with open(cutoff_output_file, "w", encoding="utf-8") as f:
+        json.dump(strict_cutoff_settlements, f, indent=2, ensure_ascii=False)
+    print(f"\nSaved strict cut-off settlements ({len(strict_cutoff_settlements):,}): {cutoff_output_file.name}")
+
+    with open(practical_output_file, "w", encoding="utf-8") as f:
+        json.dump(practical_cutoff_settlements, f, indent=2, ensure_ascii=False)
+    print(f"Saved practical cut-off settlements ({len(practical_cutoff_settlements):,}): {practical_output_file.name}")
+
     with open(connected_output_file, "w", encoding="utf-8") as f:
         json.dump(connected_settlements, f, indent=2, ensure_ascii=False)
-    print(f"\nSaved connected settlements ({len(connected_settlements):,}): {connected_output_file.name}")
+    print(f"Saved connected settlements ({len(connected_settlements):,}): {connected_output_file.name}")
 
-    with open(cutoff_output_file, "w", encoding="utf-8") as f:
-        json.dump(cutoff_settlements, f, indent=2, ensure_ascii=False)
-    print(f"Saved cut-off settlements ({len(cutoff_settlements):,}): {cutoff_output_file.name}")
-
-    # 8. Print statistics
+    # 8. Print statistics breakdown
     total_st = len(st_gdf)
+    evaluated_count = len(strict_cutoff_settlements) + len(practical_cutoff_settlements) + len(connected_settlements)
+    strict_count = len(strict_cutoff_settlements)
+    practical_count = len(practical_cutoff_settlements)
     conn_count = len(connected_settlements)
-    cutoff_count = len(cutoff_settlements)
-    pct_cutoff = (cutoff_count / total_st * 100.0) if total_st > 0 else 0.0
 
-    print("\n" + "=" * 45)
-    print("SETTLEMENT CONNECTIVITY ANALYSIS")
-    print("=" * 45)
-    print(f"Total Settlements:    {total_st:,}")
-    print(f"Connected:            {conn_count:,}")
-    print(f"Cut-off (Critical!):  {cutoff_count:,}")
-    print(f"Cut-off Percentage:   {pct_cutoff:.2f}%")
-    print("=" * 45)
+    print("\n" + "=" * 55)
+    print("SETTLEMENT CONNECTIVITY ANALYSIS BREAKDOWN")
+    print("=" * 55)
+    print(f"Total Settlements:       {total_st:,}")
+    print(f"Evaluated Settlements:   {evaluated_count:,} (skipped: {len(skipped_settlements)})")
+    print(f" - Strict Cut-offs:      {strict_count:,} (no road path exists)")
+    print(f" - Practical Cut-offs:   {practical_count:,} (detour >= {detour_threshold:.1f}x)")
+    print(f" - Connected:            {conn_count:,} (detour < {detour_threshold:.1f}x)")
+    print("=" * 55)
 
-    if cutoff_settlements:
-        print(f"\nCRITICAL: Submerged / Cut-off Settlements ({len(cutoff_settlements)}):")
-        for idx, item in enumerate(cutoff_settlements[:15], 1):
+    if strict_cutoff_settlements:
+        print(f"\nSTRICT CUT-OFF SETTLEMENTS ({strict_count}):")
+        for idx, item in enumerate(strict_cutoff_settlements[:10], 1):
             print(f" {idx:2d}. {item['name']} ({item['place_type']}) - Lat: {item['latitude']:.4f}, Lon: {item['longitude']:.4f}")
-        if len(cutoff_settlements) > 15:
-            print(f" ... and {len(cutoff_settlements) - 15} more (see {cutoff_output_file.name})")
+
+    if practical_cutoff_settlements:
+        print(f"\nPRACTICAL CUT-OFF SETTLEMENTS (Detour >= {detour_threshold:.1f}x) ({practical_count}):")
+        for idx, item in enumerate(practical_cutoff_settlements[:10], 1):
+            pre_d = item.get("pre_flood_distance_km", 0.0)
+            post_d = item.get("post_flood_distance_km", 0.0)
+            ratio = item.get("detour_ratio", 1.0)
+            print(f" {idx:2d}. {item['name']} ({item['place_type']}) - {pre_d:.2f}km -> {post_d:.2f}km ({ratio:.2f}x detour)")
 
     return {
         "total_settlements": total_st,
+        "evaluated_settlements": evaluated_count,
+        "strict_cutoff_count": strict_count,
+        "practical_cutoff_count": practical_count,
         "connected_count": conn_count,
-        "cutoff_count": cutoff_count,
-        "pct_cutoff": pct_cutoff,
-        "connected_file": connected_output_file,
         "cutoff_file": cutoff_output_file,
+        "practical_cutoff_file": practical_output_file,
+        "connected_file": connected_output_file,
     }
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Detect which settlements are cut off from service centers after flood events."
+        description="Detect strict and practical cut-off settlements from service centers after floods."
     )
     parser.add_argument(
         "--graph",
@@ -510,6 +584,12 @@ def main():
         help="Target region place name (default: 'Kamrup, Assam, India')",
     )
     parser.add_argument(
+        "--detour-threshold",
+        type=float,
+        default=3.0,
+        help="Detour ratio threshold for practical cut-off (default: 3.0)",
+    )
+    parser.add_argument(
         "--refresh-settlements",
         action="store_true",
         help="Force re-querying settlements from OSM instead of using cached settlements.geojson",
@@ -526,6 +606,7 @@ def main():
             output_dir=args.output_dir,
             place_name=args.place,
             force_refresh_settlements=args.refresh_settlements,
+            detour_threshold=args.detour_threshold,
         )
     except KeyboardInterrupt:
         print("\nOperation cancelled by user.", file=sys.stderr)

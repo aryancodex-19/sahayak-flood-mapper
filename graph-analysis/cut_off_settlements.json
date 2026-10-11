@@ -6,7 +6,8 @@
     "latitude": 26.263269,
     "longitude": 91.6963761,
     "nearest_graph_node": 11986876750,
-    "reason": "All road routes to service centers submerged"
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 7.79
   },
   {
     "id": 1339290393,
@@ -15,7 +16,8 @@
     "latitude": 26.3441702,
     "longitude": 91.7262138,
     "nearest_graph_node": 904878952,
-    "reason": "All road routes to service centers submerged"
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 15.99
   },
   {
     "id": 1692837282,
@@ -24,7 +26,8 @@
     "latitude": 26.3502805,
     "longitude": 91.8229091,
     "nearest_graph_node": 10656775810,
-    "reason": "All road routes to service centers submerged"
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 19.69
   },
   {
     "id": 2885039364,
@@ -33,7 +36,8 @@
     "latitude": 26.2740378,
     "longitude": 91.5133347,
     "nearest_graph_node": 2595623123,
-    "reason": "All road routes to service centers submerged"
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 3.68
   },
   {
     "id": 7159375989,
@@ -42,7 +46,8 @@
     "latitude": 26.4519781,
     "longitude": 91.5286231,
     "nearest_graph_node": 10577224635,
-    "reason": "All road routes to service centers submerged"
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 6.26
   },
   {
     "id": 9714359605,
@@ -51,7 +56,8 @@
     "latitude": 26.1815474,
     "longitude": 91.7619396,
     "nearest_graph_node": 4976595950,
-    "reason": "All road routes to service centers submerged"
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 1.19
   },
   {
     "id": 11665940838,
@@ -60,6 +66,7 @@
     "latitude": 26.2833341,
     "longitude": 91.6655016,
     "nearest_graph_node": 5001367009,
-    "reason": "All road routes to service centers submerged"
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 11.59
   }
 ]
