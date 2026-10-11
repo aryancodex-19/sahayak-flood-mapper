@@ -32,6 +32,38 @@
     "shortest_distance_meters": 0
   },
   {
+    "id": 245748425,
+    "name": "Patharughat",
+    "place_type": "village",
+    "latitude": 26.4516652,
+    "longitude": 91.8803712,
+    "nearest_graph_node": 10618430283,
+    "nearest_service_center": {
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 36
+    },
+    "shortest_distance_km": 14.48,
+    "shortest_distance_meters": 14483.1
+  },
+  {
+    "id": 245749553,
+    "name": "Dhamdhama",
+    "place_type": "village",
+    "latitude": 26.5594067,
+    "longitude": 91.4793749,
+    "nearest_graph_node": 5745787214,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 7
+    },
+    "shortest_distance_km": 9.79,
+    "shortest_distance_meters": 9793.8
+  },
+  {
     "id": 342100536,
     "name": "Changsari",
     "place_type": "village",
@@ -64,6 +96,54 @@
     "shortest_distance_meters": 0
   },
   {
+    "id": 566672797,
+    "name": "Dispur",
+    "place_type": "town",
+    "latitude": 26.1409355,
+    "longitude": 91.7910265,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 566672798,
+    "name": "Jorabat",
+    "place_type": "town",
+    "latitude": 26.0993157,
+    "longitude": 91.8773204,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 1339290393,
+    "name": "Baihata",
+    "place_type": "suburb",
+    "latitude": 26.3441702,
+    "longitude": 91.7262138,
+    "nearest_graph_node": 904878952,
+    "nearest_service_center": {
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 65
+    },
+    "shortest_distance_km": 16.62,
+    "shortest_distance_meters": 16619.2
+  },
+  {
     "id": 1351481042,
     "name": "Goreswar",
     "place_type": "town",
@@ -90,6 +170,1094 @@
       "node": 10600687395,
       "name": "Sualkuchi",
       "type": "nan",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 1692837282,
+    "name": "Duminichowki",
+    "place_type": "village",
+    "latitude": 26.3502805,
+    "longitude": 91.8229091,
+    "nearest_graph_node": 10656775810,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 55
+    },
+    "shortest_distance_km": 19.69,
+    "shortest_distance_meters": 19690.6
+  },
+  {
+    "id": 1698296623,
+    "name": "Fancy Bazaar",
+    "place_type": "suburb",
+    "latitude": 26.1799322,
+    "longitude": 91.7362163,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 1698296637,
+    "name": "Kamakhya Dham",
+    "place_type": "suburb",
+    "latitude": 26.1664476,
+    "longitude": 91.7063761,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 2385333812,
+    "name": "Khoirabari",
+    "place_type": "town",
+    "latitude": 26.6042737,
+    "longitude": 91.8146519,
+    "nearest_graph_node": 5792353889,
+    "nearest_service_center": {
+      "node": 5792353889,
+      "name": "Goreswar",
+      "type": "nan",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 2885039361,
+    "name": "Amingaon",
+    "place_type": "suburb",
+    "latitude": 26.1861581,
+    "longitude": 91.6699507,
+    "nearest_graph_node": 10613387930,
+    "nearest_service_center": {
+      "node": 10600687395,
+      "name": "Sualkuchi",
+      "type": "nan",
+      "path_nodes_count": 57
+    },
+    "shortest_distance_km": 15.22,
+    "shortest_distance_meters": 15223.5
+  },
+  {
+    "id": 3677614769,
+    "name": "Tamulpur",
+    "place_type": "town",
+    "latitude": 26.6108401,
+    "longitude": 91.5761562,
+    "nearest_graph_node": 904880997,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 12
+    },
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7
+  },
+  {
+    "id": 5623038879,
+    "name": "North Guwahati",
+    "place_type": "suburb",
+    "latitude": 26.1915072,
+    "longitude": 91.7184377,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 5623038882,
+    "name": "Sunchali",
+    "place_type": "suburb",
+    "latitude": 26.2040027,
+    "longitude": 91.8037641,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 5623038906,
+    "name": "Kurua",
+    "place_type": "village",
+    "latitude": 26.2376126,
+    "longitude": 91.8206191,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 6160665840,
+    "name": "Lokhra",
+    "place_type": "suburb",
+    "latitude": 26.1112218,
+    "longitude": 91.7491912,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160665841,
+    "name": "Sawkuchi",
+    "place_type": "suburb",
+    "latitude": 26.1234509,
+    "longitude": 91.748763,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160665842,
+    "name": "Sonaighuli",
+    "place_type": "suburb",
+    "latitude": 26.1277952,
+    "longitude": 91.7488595,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160665852,
+    "name": "Jyotikuchi",
+    "place_type": "suburb",
+    "latitude": 26.130561,
+    "longitude": 91.7354268,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160665853,
+    "name": "Adagudam",
+    "place_type": "suburb",
+    "latitude": 26.136674,
+    "longitude": 91.7367855,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160665854,
+    "name": "Barsapara",
+    "place_type": "suburb",
+    "latitude": 26.1449422,
+    "longitude": 91.7391236,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160665855,
+    "name": "Lalganesh",
+    "place_type": "suburb",
+    "latitude": 26.1415953,
+    "longitude": 91.7432469,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160665857,
+    "name": "Odalbakra",
+    "place_type": "suburb",
+    "latitude": 26.1401629,
+    "longitude": 91.7510039,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160729422,
+    "name": "Kahilipara",
+    "place_type": "suburb",
+    "latitude": 26.1445994,
+    "longitude": 91.7718397,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160729426,
+    "name": "Hatigaon",
+    "place_type": "suburb",
+    "latitude": 26.1325731,
+    "longitude": 91.7796601,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160749663,
+    "name": "Bhetapara",
+    "place_type": "suburb",
+    "latitude": 26.1180819,
+    "longitude": 91.7854832,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160749671,
+    "name": "Lalmati",
+    "place_type": "suburb",
+    "latitude": 26.1118766,
+    "longitude": 91.7885229,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160803210,
+    "name": "Six Mile",
+    "place_type": "suburb",
+    "latitude": 26.1309933,
+    "longitude": 91.8071854,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160810152,
+    "name": "বেলতলা",
+    "place_type": "suburb",
+    "latitude": 26.1237215,
+    "longitude": 91.7990993,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160810227,
+    "name": "Japorigog",
+    "place_type": "suburb",
+    "latitude": 26.1577574,
+    "longitude": 91.7887736,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160810292,
+    "name": "Basistha Chariali",
+    "place_type": "suburb",
+    "latitude": 26.1121506,
+    "longitude": 91.7977943,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160815872,
+    "name": "Ambikagiri Nagar",
+    "place_type": "suburb",
+    "latitude": 26.1691174,
+    "longitude": 91.7827667,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160816885,
+    "name": "Zoo Rd Tiniali",
+    "place_type": "suburb",
+    "latitude": 26.1753871,
+    "longitude": 91.7774522,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160817648,
+    "name": "চান্দমাৰী",
+    "place_type": "suburb",
+    "latitude": 26.1841165,
+    "longitude": 91.7740906,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160818822,
+    "name": "Noonmati Refinery",
+    "place_type": "suburb",
+    "latitude": 26.1836349,
+    "longitude": 91.8130252,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 6160885078,
+    "name": "Hengrabari",
+    "place_type": "suburb",
+    "latitude": 26.1508008,
+    "longitude": 91.8037298,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160885941,
+    "name": "গণেশগুৰি",
+    "place_type": "suburb",
+    "latitude": 26.149571,
+    "longitude": 91.7850121,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160886152,
+    "name": "ভাঙাগড়",
+    "place_type": "suburb",
+    "latitude": 26.165473,
+    "longitude": 91.7695629,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160888960,
+    "name": "Guwahati Club",
+    "place_type": "suburb",
+    "latitude": 26.1849139,
+    "longitude": 91.756824,
+    "nearest_graph_node": 4976595860,
+    "nearest_service_center": {
+      "node": 4976595860,
+      "name": "WINTROBE HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160896263,
+    "name": "নাৰেঙ্গী",
+    "place_type": "suburb",
+    "latitude": 26.1762413,
+    "longitude": 91.8292896,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 6160897372,
+    "name": "Gitanagar",
+    "place_type": "suburb",
+    "latitude": 26.1741894,
+    "longitude": 91.7937356,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6160897853,
+    "name": "Pathar Quarry",
+    "place_type": "suburb",
+    "latitude": 26.1684939,
+    "longitude": 91.8298545,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 6161163702,
+    "name": "Jalukbari",
+    "place_type": "suburb",
+    "latitude": 26.1554983,
+    "longitude": 91.671224,
+    "nearest_graph_node": 10613387930,
+    "nearest_service_center": {
+      "node": 10600687395,
+      "name": "Sualkuchi",
+      "type": "nan",
+      "path_nodes_count": 57
+    },
+    "shortest_distance_km": 15.22,
+    "shortest_distance_meters": 15223.5
+  },
+  {
+    "id": 6161184929,
+    "name": "Borbari",
+    "place_type": "suburb",
+    "latitude": 26.1579771,
+    "longitude": 91.8090488,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6161186018,
+    "name": "Mathgharia",
+    "place_type": "suburb",
+    "latitude": 26.1759804,
+    "longitude": 91.811193,
+    "nearest_graph_node": 10617684707,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6161187086,
+    "name": "Noonmati",
+    "place_type": "suburb",
+    "latitude": 26.1979372,
+    "longitude": 91.7998576,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 6161187087,
+    "name": "Ambari",
+    "place_type": "suburb",
+    "latitude": 26.1845663,
+    "longitude": 91.7539777,
+    "nearest_graph_node": 4976595860,
+    "nearest_service_center": {
+      "node": 4976595860,
+      "name": "WINTROBE HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6161187286,
+    "name": "Silpukhuri",
+    "place_type": "suburb",
+    "latitude": 26.1843424,
+    "longitude": 91.7630711,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6161187904,
+    "name": "Pan Bazar",
+    "place_type": "suburb",
+    "latitude": 26.1853214,
+    "longitude": 91.7472508,
+    "nearest_graph_node": 4976595860,
+    "nearest_service_center": {
+      "node": 4976595860,
+      "name": "WINTROBE HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6161189285,
+    "name": "Machkhowa",
+    "place_type": "suburb",
+    "latitude": 26.1755052,
+    "longitude": 91.734023,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6161189988,
+    "name": "Bharalumukh",
+    "place_type": "suburb",
+    "latitude": 26.1716385,
+    "longitude": 91.7292129,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6161196685,
+    "name": "Birubari",
+    "place_type": "suburb",
+    "latitude": 26.1611819,
+    "longitude": 91.7522351,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163737300,
+    "name": "পল্টন বজাৰ",
+    "place_type": "suburb",
+    "latitude": 26.1794742,
+    "longitude": 91.7525068,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163738316,
+    "name": "Railway Colony",
+    "place_type": "suburb",
+    "latitude": 26.1808827,
+    "longitude": 91.7824864,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163741920,
+    "name": "Shantipur",
+    "place_type": "suburb",
+    "latitude": 26.1659951,
+    "longitude": 91.7275191,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163762077,
+    "name": "Sarusajai",
+    "place_type": "suburb",
+    "latitude": 26.1100577,
+    "longitude": 91.7605013,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163766750,
+    "name": "Bongaon",
+    "place_type": "suburb",
+    "latitude": 26.1177701,
+    "longitude": 91.7933853,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163776904,
+    "name": "খানাপাৰা",
+    "place_type": "suburb",
+    "latitude": 26.125094,
+    "longitude": 91.810908,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163779126,
+    "name": "Super Market",
+    "place_type": "neighbourhood",
+    "latitude": 26.1409862,
+    "longitude": 91.7954856,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163780722,
+    "name": "Wireless",
+    "place_type": "suburb",
+    "latitude": 26.1348495,
+    "longitude": 91.7924167,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6163787851,
+    "name": "Maligaon",
+    "place_type": "town",
+    "latitude": 26.1600453,
+    "longitude": 91.6958086,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168594201,
+    "name": "Bamunimaidam",
+    "place_type": "suburb",
+    "latitude": 26.1852211,
+    "longitude": 91.7886629,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168597952,
+    "name": "Ulubari",
+    "place_type": "suburb",
+    "latitude": 26.175003,
+    "longitude": 91.7576927,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168646060,
+    "name": "Aathgaon",
+    "place_type": "suburb",
+    "latitude": 26.1691075,
+    "longitude": 91.7401827,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168654474,
+    "name": "Rehabari",
+    "place_type": "suburb",
+    "latitude": 26.1702255,
+    "longitude": 91.751208,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168655878,
+    "name": "Fatasil Ambari",
+    "place_type": "suburb",
+    "latitude": 26.1582623,
+    "longitude": 91.7344457,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168657391,
+    "name": "Rajbhawan",
+    "place_type": "suburb",
+    "latitude": 26.1967021,
+    "longitude": 91.7640008,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168658413,
+    "name": "Dhirenpara",
+    "place_type": "suburb",
+    "latitude": 26.1502556,
+    "longitude": 91.7291425,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168663966,
+    "name": "Christian Basti",
+    "place_type": "suburb",
+    "latitude": 26.1541815,
+    "longitude": 91.7796261,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168664036,
+    "name": "Ananda Nagar",
+    "place_type": "suburb",
+    "latitude": 26.1576559,
+    "longitude": 91.7706055,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6168664670,
+    "name": "Satgaon",
+    "place_type": "suburb",
+    "latitude": 26.158949,
+    "longitude": 91.8385701,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 6168664671,
+    "name": "Bonda Gaon",
+    "place_type": "suburb",
+    "latitude": 26.1806993,
+    "longitude": 91.841936,
+    "nearest_graph_node": 566703204,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    },
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6
+  },
+  {
+    "id": 6168671977,
+    "name": "Anil Nagar",
+    "place_type": "suburb",
+    "latitude": 26.1673224,
+    "longitude": 91.7731606,
+    "nearest_graph_node": 4976595860,
+    "nearest_service_center": {
+      "node": 4976595860,
+      "name": "WINTROBE HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 6884791085,
+    "name": "Paltan Baazar",
+    "place_type": "neighbourhood",
+    "latitude": 26.1810484,
+    "longitude": 91.750173,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
       "path_nodes_count": 1
     },
     "shortest_distance_km": 0.0,
@@ -126,6 +1294,54 @@
     },
     "shortest_distance_km": 13.53,
     "shortest_distance_meters": 13531.8
+  },
+  {
+    "id": 7159263816,
+    "name": "Azara",
+    "place_type": "suburb",
+    "latitude": 26.1211108,
+    "longitude": 91.6164279,
+    "nearest_graph_node": 4976870788,
+    "nearest_service_center": {
+      "node": 10600687395,
+      "name": "Sualkuchi",
+      "type": "nan",
+      "path_nodes_count": 19
+    },
+    "shortest_distance_km": 1.57,
+    "shortest_distance_meters": 1569.7
+  },
+  {
+    "id": 7159263817,
+    "name": "Palasbari",
+    "place_type": "village",
+    "latitude": 26.1206485,
+    "longitude": 91.4521694,
+    "nearest_graph_node": 10601107686,
+    "nearest_service_center": {
+      "node": 10600687395,
+      "name": "Sualkuchi",
+      "type": "nan",
+      "path_nodes_count": 59
+    },
+    "shortest_distance_km": 9.88,
+    "shortest_distance_meters": 9876.9
+  },
+  {
+    "id": 7159365222,
+    "name": "Banekuchi",
+    "place_type": "village",
+    "latitude": 26.4648873,
+    "longitude": 91.3905429,
+    "nearest_graph_node": 10629518138,
+    "nearest_service_center": {
+      "node": 10629518138,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
   },
   {
     "id": 7159370809,
@@ -176,6 +1392,54 @@
     "shortest_distance_meters": 7859.2
   },
   {
+    "id": 8041812492,
+    "name": "Ghoramara Chariali",
+    "place_type": "suburb",
+    "latitude": 26.1206544,
+    "longitude": 91.7788451,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 8325113487,
+    "name": "Kheraikuchi",
+    "place_type": "suburb",
+    "latitude": 26.1212939,
+    "longitude": 91.7700729,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 9714359605,
+    "name": "Gandhi Basti",
+    "place_type": "suburb",
+    "latitude": 26.1815474,
+    "longitude": 91.7619396,
+    "nearest_graph_node": 4976595950,
+    "nearest_service_center": {
+      "node": 4976595860,
+      "name": "WINTROBE HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 10
+    },
+    "shortest_distance_km": 1.19,
+    "shortest_distance_meters": 1188.2
+  },
+  {
     "id": 11665940838,
     "name": "Borka",
     "place_type": "village",
@@ -206,5 +1470,181 @@
     },
     "shortest_distance_km": 6.33,
     "shortest_distance_meters": 6332.6
+  },
+  {
+    "id": 12051475377,
+    "name": "Jārtāluk",
+    "place_type": "hamlet",
+    "latitude": 26.5900622,
+    "longitude": 91.5003848,
+    "nearest_graph_node": 904880997,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 12
+    },
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7
+  },
+  {
+    "id": 12051475378,
+    "name": "Jārtāluk",
+    "place_type": "hamlet",
+    "latitude": 26.5953197,
+    "longitude": 91.492188,
+    "nearest_graph_node": 904880997,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 12
+    },
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7
+  },
+  {
+    "id": 12051475379,
+    "name": "Khāgrābārigaon",
+    "place_type": "hamlet",
+    "latitude": 26.6231378,
+    "longitude": 91.461482,
+    "nearest_graph_node": 904880997,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 12
+    },
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7
+  },
+  {
+    "id": 12051475398,
+    "name": "Ghorāmāra",
+    "place_type": "hamlet",
+    "latitude": 26.589122,
+    "longitude": 91.4858794,
+    "nearest_graph_node": 904880997,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 12
+    },
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7
+  },
+  {
+    "id": 12051475399,
+    "name": "Kadamtola",
+    "place_type": "hamlet",
+    "latitude": 26.6071576,
+    "longitude": 91.4828539,
+    "nearest_graph_node": 904880997,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 12
+    },
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7
+  },
+  {
+    "id": 12051475400,
+    "name": "Kadamtola",
+    "place_type": "hamlet",
+    "latitude": 26.6151,
+    "longitude": 91.4833259,
+    "nearest_graph_node": 904880997,
+    "nearest_service_center": {
+      "node": 4242479660,
+      "name": "Rangia",
+      "type": "nan",
+      "path_nodes_count": 12
+    },
+    "shortest_distance_km": 12.84,
+    "shortest_distance_meters": 12836.7
+  },
+  {
+    "id": 12082230957,
+    "name": "Pandu",
+    "place_type": "suburb",
+    "latitude": 26.1634597,
+    "longitude": 91.6806078,
+    "nearest_graph_node": 10613387930,
+    "nearest_service_center": {
+      "node": 10600687395,
+      "name": "Sualkuchi",
+      "type": "nan",
+      "path_nodes_count": 57
+    },
+    "shortest_distance_km": 15.22,
+    "shortest_distance_meters": 15223.5
+  },
+  {
+    "id": 12082267422,
+    "name": "Railway Colony",
+    "place_type": "suburb",
+    "latitude": 26.1516147,
+    "longitude": 91.6997373,
+    "nearest_graph_node": 4993947047,
+    "nearest_service_center": {
+      "node": 4993947047,
+      "name": "Sanjevani Hospital",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 12847009719,
+    "name": "Pub Suruj Nagar",
+    "place_type": "neighbourhood",
+    "latitude": 26.13692,
+    "longitude": 91.7555192,
+    "nearest_graph_node": 7085611836,
+    "nearest_service_center": {
+      "node": 7085611836,
+      "name": "Institute Of Human Reproduction",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 14191593758,
+    "name": "Last Gate",
+    "place_type": "neighbourhood",
+    "latitude": 26.1391159,
+    "longitude": 91.790114,
+    "nearest_graph_node": 7085611826,
+    "nearest_service_center": {
+      "node": 7085611826,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
+  },
+  {
+    "id": 14208153161,
+    "name": "উজান বজাৰ",
+    "place_type": "neighbourhood",
+    "latitude": 26.1919617,
+    "longitude": 91.755303,
+    "nearest_graph_node": 9163886667,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 1
+    },
+    "shortest_distance_km": 0.0,
+    "shortest_distance_meters": 0
   }
 ]
