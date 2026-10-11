@@ -14,6 +14,14 @@ from shapely.geometry import Point
 import networkx as nx
 import osmnx as ox
 
+# Ensure UTF-8 output encoding on Windows console
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 
 # Population estimates based on settlement classification
 POPULATION_MAP = {
@@ -151,7 +159,7 @@ def rank_cutoff_settlements(
             "rank", "name", "type", "population_est", "lat", "lon", "score", "category", "reason", "geometry"
         ], crs="EPSG:4326")
         empty_gdf.to_file(geojson_output_path, driver="GeoJSON")
-        return {"total_ranked": 0, "csv_path": csv_output_path, "geojson_path": geojson_output_path}
+        return {"total_ranked": 0, "csv_path": csv_output_path, "geojson_path": geojson_output_path, "top_5": []}
 
     # 3. Load pre-flood graph & service centers if available
     G = None
