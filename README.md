@@ -1,7 +1,5 @@
 # Sahayak: Mapping Flood Damage from Space
 
-**Track B — IIT Mandi Multimodal AI Hackathon 2026**
-
 ## Team
 - Utkarsh — ML Model
 - Shashank — Frontend
