@@ -80,6 +80,26 @@
     }
   },
   {
+    "id": 342100536,
+    "name": "Changsari",
+    "place_type": "village",
+    "latitude": 26.263269,
+    "longitude": 91.6963761,
+    "nearest_graph_node": 11986876750,
+    "pre_flood_distance_km": 7.79,
+    "post_flood_distance_km": 7.79,
+    "shortest_distance_km": 7.79,
+    "shortest_distance_meters": 7789.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 9163886667,
+      "name": "KGMT HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 37
+    }
+  },
+  {
     "id": 566672795,
     "name": "Hajo",
     "place_type": "town",
@@ -140,6 +160,26 @@
     }
   },
   {
+    "id": 1339290393,
+    "name": "Baihata",
+    "place_type": "suburb",
+    "latitude": 26.3441702,
+    "longitude": 91.7262138,
+    "nearest_graph_node": 904878952,
+    "pre_flood_distance_km": 15.99,
+    "post_flood_distance_km": 15.99,
+    "shortest_distance_km": 15.99,
+    "shortest_distance_meters": 15985.5,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10653438005,
+      "name": "Swasti Hospital",
+      "type": "hospital",
+      "path_nodes_count": 61
+    }
+  },
+  {
     "id": 1351481042,
     "name": "Goreswar",
     "place_type": "town",
@@ -177,6 +217,26 @@
       "name": "Sualkuchi",
       "type": "nan",
       "path_nodes_count": 1
+    }
+  },
+  {
+    "id": 1692837282,
+    "name": "Duminichowki",
+    "place_type": "village",
+    "latitude": 26.3502805,
+    "longitude": 91.8229091,
+    "nearest_graph_node": 10656775810,
+    "pre_flood_distance_km": 19.69,
+    "post_flood_distance_km": 19.69,
+    "shortest_distance_km": 19.69,
+    "shortest_distance_meters": 19690.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 55
     }
   },
   {
@@ -260,6 +320,26 @@
     }
   },
   {
+    "id": 2885039364,
+    "name": "Kalitakuchi",
+    "place_type": "village",
+    "latitude": 26.2740378,
+    "longitude": 91.5133347,
+    "nearest_graph_node": 2595623123,
+    "pre_flood_distance_km": 3.68,
+    "post_flood_distance_km": 3.68,
+    "shortest_distance_km": 3.68,
+    "shortest_distance_meters": 3677.1,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 4992362826,
+      "name": "Hajo",
+      "type": "nan",
+      "path_nodes_count": 22
+    }
+  },
+  {
     "id": 3677614769,
     "name": "Tamulpur",
     "place_type": "town",
@@ -297,6 +377,46 @@
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
+    }
+  },
+  {
+    "id": 5623038882,
+    "name": "Sunchali",
+    "place_type": "suburb",
+    "latitude": 26.2040027,
+    "longitude": 91.8037641,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    }
+  },
+  {
+    "id": 5623038906,
+    "name": "Kurua",
+    "place_type": "village",
+    "latitude": 26.2376126,
+    "longitude": 91.8206191,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
     }
   },
   {
@@ -680,6 +800,26 @@
     }
   },
   {
+    "id": 6160818822,
+    "name": "Noonmati Refinery",
+    "place_type": "suburb",
+    "latitude": 26.1836349,
+    "longitude": 91.8130252,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    }
+  },
+  {
     "id": 6160885078,
     "name": "Hengrabari",
     "place_type": "suburb",
@@ -760,6 +900,26 @@
     }
   },
   {
+    "id": 6160896263,
+    "name": "নাৰেঙ্গী",
+    "place_type": "suburb",
+    "latitude": 26.1762413,
+    "longitude": 91.8292896,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    }
+  },
+  {
     "id": 6160897372,
     "name": "Gitanagar",
     "place_type": "suburb",
@@ -777,6 +937,26 @@
       "name": "KGMT HOSPITAL",
       "type": "hospital",
       "path_nodes_count": 1
+    }
+  },
+  {
+    "id": 6160897853,
+    "name": "Pathar Quarry",
+    "place_type": "suburb",
+    "latitude": 26.1684939,
+    "longitude": 91.8298545,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
     }
   },
   {
@@ -837,6 +1017,26 @@
       "name": "Gate Hospitals",
       "type": "hospital",
       "path_nodes_count": 1
+    }
+  },
+  {
+    "id": 6161187086,
+    "name": "Noonmati",
+    "place_type": "suburb",
+    "latitude": 26.1979372,
+    "longitude": 91.7998576,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
     }
   },
   {
@@ -1320,6 +1520,46 @@
     }
   },
   {
+    "id": 6168664670,
+    "name": "Satgaon",
+    "place_type": "suburb",
+    "latitude": 26.158949,
+    "longitude": 91.8385701,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    }
+  },
+  {
+    "id": 6168664671,
+    "name": "Bonda Gaon",
+    "place_type": "suburb",
+    "latitude": 26.1806993,
+    "longitude": 91.841936,
+    "nearest_graph_node": 566703204,
+    "pre_flood_distance_km": 4.66,
+    "post_flood_distance_km": 4.66,
+    "shortest_distance_km": 4.66,
+    "shortest_distance_meters": 4660.6,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10617684707,
+      "name": "Gate Hospitals",
+      "type": "hospital",
+      "path_nodes_count": 4
+    }
+  },
+  {
     "id": 6168671977,
     "name": "Anil Nagar",
     "place_type": "suburb",
@@ -1467,16 +1707,36 @@
     "longitude": 91.4800429,
     "nearest_graph_node": 10628437746,
     "pre_flood_distance_km": 11.48,
-    "post_flood_distance_km": 15.54,
-    "shortest_distance_km": 15.54,
-    "shortest_distance_meters": 15543.0,
-    "detour_ratio": 1.35,
-    "extra_distance_km": 4.07,
+    "post_flood_distance_km": 11.48,
+    "shortest_distance_km": 11.48,
+    "shortest_distance_meters": 11476.7,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
     "nearest_service_center": {
-      "node": 10628307476,
-      "name": "Nalbari Multispeciality Hospital",
+      "node": 4992362826,
+      "name": "Hajo",
+      "type": "nan",
+      "path_nodes_count": 58
+    }
+  },
+  {
+    "id": 7159375989,
+    "name": "Ghograpar",
+    "place_type": "village",
+    "latitude": 26.4519781,
+    "longitude": 91.5286231,
+    "nearest_graph_node": 10577224635,
+    "pre_flood_distance_km": 6.26,
+    "post_flood_distance_km": 6.26,
+    "shortest_distance_km": 6.26,
+    "shortest_distance_meters": 6262.1,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 10629518138,
+      "name": "nan",
       "type": "hospital",
-      "path_nodes_count": 44
+      "path_nodes_count": 9
     }
   },
   {
@@ -1537,6 +1797,46 @@
       "name": "Institute Of Human Reproduction",
       "type": "hospital",
       "path_nodes_count": 1
+    }
+  },
+  {
+    "id": 9714359605,
+    "name": "Gandhi Basti",
+    "place_type": "suburb",
+    "latitude": 26.1815474,
+    "longitude": 91.7619396,
+    "nearest_graph_node": 4976595950,
+    "pre_flood_distance_km": 1.19,
+    "post_flood_distance_km": 1.19,
+    "shortest_distance_km": 1.19,
+    "shortest_distance_meters": 1188.2,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 4976595860,
+      "name": "WINTROBE HOSPITAL",
+      "type": "hospital",
+      "path_nodes_count": 10
+    }
+  },
+  {
+    "id": 11665940838,
+    "name": "Borka",
+    "place_type": "village",
+    "latitude": 26.2833341,
+    "longitude": 91.6655016,
+    "nearest_graph_node": 5001367009,
+    "pre_flood_distance_km": 11.59,
+    "post_flood_distance_km": 11.59,
+    "shortest_distance_km": 11.59,
+    "shortest_distance_meters": 11587.8,
+    "detour_ratio": 1.0,
+    "extra_distance_km": 0.0,
+    "nearest_service_center": {
+      "node": 4994313138,
+      "name": "nan",
+      "type": "hospital",
+      "path_nodes_count": 55
     }
   },
   {
