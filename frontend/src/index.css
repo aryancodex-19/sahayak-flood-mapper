@@ -1,34 +1,47 @@
 @import "tailwindcss";
 
+:root {
+  --ns-muted: #8a8a8a;
+  --ns-accent: #ffffff;
+}
+
+.dark {
+  --ns-muted: #8f8f8f;
+  --ns-accent: #ffffff;
+}
+
+/* Map tiles: dark filter for OSM tiles (keeps tiles readable in dark theme) */
 .leaflet-tile-pane {
   filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.95) saturate(0.7);
 }
 .leaflet-container {
-  background: #080B18;
+  background: #0a0a0a;
 }
 
 @theme inline {
-  --color-background: #080B18;
-  --color-foreground: #E8EAF6;
-  --color-card: #10142A;
-  --color-card-foreground: #E8EAF6;
-  --color-primary: #38BDF8;
-  --color-primary-foreground: #080B18;
-  --color-muted: #1A1F3A;
-  --color-muted-foreground: #8892B0;
-  --color-destructive: #FF4757;
-  --color-success: #2ED573;
-  --color-warning: #FFA502;
-  --color-border: rgba(56, 189, 248, 0.15);
-  --color-ring: #38BDF8;
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f5f5;
+  --color-card: #141414;
+  --color-card-foreground: #f5f5f5;
+  --color-primary: #ffffff;
+  --color-primary-foreground: #0a0a0a;
+  --color-muted: #1f1f1f;
+  --color-muted-foreground: #8a8a8a;
+  --color-ns-muted: #8a8a8a;
+  --color-ns-accent: #ffffff;
+  --color-destructive: #d4d4d4;
+  --color-success: #d4d4d4;
+  --color-warning: #d4d4d4;
+  --color-border: rgba(255, 255, 255, 0.14);
+  --color-ring: #ffffff;
 }
 
 @layer base {
-  * { border-color: rgba(56, 189, 248, 0.15); }
+  * { border-color: rgba(255, 255, 255, 0.14); }
 
   body {
-    background-color: #080B18;
-    color: #E8EAF6;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
@@ -38,7 +51,22 @@
   html { scroll-behavior: smooth; }
 
   ::-webkit-scrollbar { width: 8px; height: 8px; }
-  ::-webkit-scrollbar-track { background: #10142A; }
-  ::-webkit-scrollbar-thumb { background: #1A1F3A; border-radius: 4px; }
-  ::-webkit-scrollbar-thumb:hover { background: #38BDF8; }
+  ::-webkit-scrollbar-track { background: #141414; }
+  ::-webkit-scrollbar-thumb { background: #1f1f1f; border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: #ffffff; }
+}
+
+[data-hero="burin"] {
+  --color-primary: #ffffff;
+  --color-ring: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.12);
+}
+
+[data-hero="burin"] .font-mono {
+  letter-spacing: 0.25em;
+}
+
+svg[role="img"],
+canvas[role="img"] {
+  filter: none;
 }

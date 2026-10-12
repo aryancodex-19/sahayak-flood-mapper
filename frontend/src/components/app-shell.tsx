@@ -3,6 +3,8 @@ import type { Language, Scenario } from "@/types/data";
 import { Navbar } from "./navbar";
 import { Sidebar } from "./sidebar";
 
+type Page = "overview" | "map" | "priority" | "report";
+
 interface AppShellProps {
   children: ReactNode;
   scenario?: Scenario;
@@ -14,6 +16,8 @@ interface AppShellProps {
   showSettlements: boolean;
   onShowSettlementsChange: (v: boolean) => void;
   onBackToHome: () => void;
+  activePage: Page;
+  onPageChange: (page: Page) => void;
 }
 
 export function AppShell({ children, ...sidebarProps }: AppShellProps) {

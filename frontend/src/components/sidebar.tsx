@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import type { Language, Scenario } from "@/types/data";
 import { LayoutDashboard, Map as MapIcon, ListOrdered, FileText } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+
+type Page = "overview" | "map" | "priority" | "report";
 
 interface SidebarProps {
   scenario?: Scenario;
@@ -11,23 +14,18 @@ interface SidebarProps {
   onShowFloodChange: (v: boolean) => void;
   showSettlements: boolean;
   onShowSettlementsChange: (v: boolean) => void;
+  activePage: Page;
+  onPageChange: (page: Page) => void;
 }
 
-export function Sidebar({ scenario = "severe", onScenarioChange, showFlood, onShowFloodChange, showSettlements, onShowSettlementsChange }: SidebarProps) {
-  const navItems = [
-    { icon: LayoutDashboard, label: "Overview", target: "top" },
-    { icon: MapIcon, label: "Map", target: "map" },
-    { icon: ListOrdered, label: "Priority List", target: "priority-table" },
-    { icon: FileText, label: "Report", target: "report" },
+export function Sidebar({ scenario = "severe", onScenarioChange, showFlood, onShowFloodChange, showSettlements, onShowSettlementsChange, activePage, onPageChange }: SidebarProps) {
+const { t } = useLanguage();
+  const navItems: { icon: React.ComponentType<{ className?: string }>; label: string; page: Page }[] = [
+    { icon: LayoutDashboard, label: t("navOverview"), page: "overview" },
+    { icon: MapIcon, label: t("navMap"), page: "map" },
+    { icon: ListOrdered, label: t("navPriority"), page: "priority" },
+    { icon: FileText, label: t("navReport"), page: "report" },
   ];
-
-  const handleNavClick = (target: string) => {
-    if (target === "top") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      document.getElementById(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   return (
     <aside className="hidden w-64 shrink-0 border-r border-border bg-card/30 md:block">
@@ -64,13 +62,17 @@ export function Sidebar({ scenario = "severe", onScenarioChange, showFlood, onSh
             Menu
           </h3>
           <nav className="space-y-1">
-            {navItems.map(({ icon: Icon, label, target }) => (
+            {navItems.map(({ icon: Icon, label, page }) => (
               <motion.button
-                key={target}
-                onClick={() => handleNavClick(target)}
+                key={page}
+                onClick={() => onPageChange(page)}
                 whileHover={{ x: 4 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex w-full items-center gap-2 rounded-md px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted/30 hover:text-foreground"
+                className={`flex w-full items-center gap-2 rounded-md px-2.5 py-1.5 text-sm transition-colors ${
+                  activePage === page
+                    ? "bg-primary/10 text-primary border-l-2 border-primary"
+                    : "text-muted-foreground hover:bg-muted/30 hover:text-foreground"
+                }`}
               >
                 <Icon className="h-4 w-4" />
                 {label}
@@ -123,3 +125,4 @@ export function Sidebar({ scenario = "severe", onScenarioChange, showFlood, onSh
     </aside>
   );
 }
+
