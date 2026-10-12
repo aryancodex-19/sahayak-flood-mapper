@@ -1,0 +1,11 @@
+# Raw satellite imagery & GeoTIFFs (keep local, do not push large rasters to GitHub)
+data/raw/*.tif
+data/raw/*.tiff
+
+# Model training checkpoints & outputs
+outputs/
+checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
