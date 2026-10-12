@@ -6,6 +6,7 @@ using the preliminary U-Net binary prediction raster (flood_prediction.tif) with
 any teammate files or downloading road networks.
 """
 
+import os
 import sys
 import json
 from pathlib import Path
@@ -24,9 +25,43 @@ graph_analysis_dir = repo_root / "graph-analysis"
 if str(graph_analysis_dir) not in sys.path:
     sys.path.insert(0, str(graph_analysis_dir))
 
-from flood_overlay import overlay_flood_on_network
-from connectivity import analyze_flood_connectivity
-from priority_ranking import rank_cutoff_settlements
+# Ensure geospatial dependencies are available;
+# if invoked from an environment lacking geopandas (e.g. ml-model/.venv),
+# automatically delegate to graph-analysis/.venv where geopandas is installed.
+try:
+    import geopandas  # noqa: F401
+except ImportError:
+    ga_python = graph_analysis_dir / (".venv/Scripts/python.exe" if sys.platform == "win32" else ".venv/bin/python")
+    is_already_delegated = os.environ.get("_SAHAYAK_GA_DELEGATED") == "1"
+    if ga_python.exists() and Path(sys.executable).resolve() != ga_python.resolve() and not is_already_delegated:
+        import subprocess
+        child_env = os.environ.copy()
+        child_env["_SAHAYAK_GA_DELEGATED"] = "1"
+        result = subprocess.run([str(ga_python), str(Path(__file__).resolve())] + sys.argv[1:], env=child_env)
+        sys.exit(result.returncode)
+    else:
+        print(
+            f"[ERROR] Required geospatial dependencies (geopandas) not available in {sys.executable}.\n"
+            f"Please run using graph-analysis/.venv or install the required graph-analysis dependencies.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+
+import importlib
+
+# Dynamically import graph-analysis pipeline modules
+_mod_overlay = importlib.import_module("flood_overlay")
+overlay_flood_on_network = _mod_overlay.overlay_flood_on_network
+
+_mod_connectivity = importlib.import_module("connectivity")
+analyze_flood_connectivity = _mod_connectivity.analyze_flood_connectivity
+
+_mod_ranking = importlib.import_module("priority_ranking")
+rank_cutoff_settlements = _mod_ranking.rank_cutoff_settlements
+
+
+
 
 
 def run_integration():
