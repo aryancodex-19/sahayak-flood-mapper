@@ -1,0 +1,452 @@
+{
+  "type": "FeatureCollection",
+  "name": "priority_list",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 1,
+        "name": "Amingaon",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 15.22,
+        "lat": 26.1861581,
+        "lon": 91.6699507,
+        "score": 76.32,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 15.22km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.6699507,
+          26.1861581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 2,
+        "name": "Jalukbari",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 15.22,
+        "lat": 26.1554983,
+        "lon": 91.671224,
+        "score": 76.32,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 15.22km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.671224,
+          26.1554983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 3,
+        "name": "Pandu",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 15.22,
+        "lat": 26.1634597,
+        "lon": 91.6806078,
+        "score": 76.32,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 15.22km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.6806078,
+          26.1634597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 4,
+        "name": "Sunchali",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 4.66,
+        "lat": 26.2040027,
+        "lon": 91.8037641,
+        "score": 67.31,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8037641,
+          26.2040027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 5,
+        "name": "Noonmati Refinery",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 4.66,
+        "lat": 26.1836349,
+        "lon": 91.8130252,
+        "score": 67.31,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8130252,
+          26.1836349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 6,
+        "name": "নাৰেঙ্গী",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 4.66,
+        "lat": 26.1762413,
+        "lon": 91.8292896,
+        "score": 67.31,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8292896,
+          26.1762413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 7,
+        "name": "Pathar Quarry",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 4.66,
+        "lat": 26.1684939,
+        "lon": 91.8298545,
+        "score": 67.31,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8298545,
+          26.1684939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 8,
+        "name": "Noonmati",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 4.66,
+        "lat": 26.1979372,
+        "lon": 91.7998576,
+        "score": 67.31,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.7998576,
+          26.1979372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 9,
+        "name": "Satgaon",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 4.66,
+        "lat": 26.158949,
+        "lon": 91.8385701,
+        "score": 67.31,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8385701,
+          26.158949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 10,
+        "name": "Bonda Gaon",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 4.66,
+        "lat": 26.1806993,
+        "lon": 91.841936,
+        "score": 67.31,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.841936,
+          26.1806993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 11,
+        "name": "Azara",
+        "type": "suburb",
+        "population_est": 3000,
+        "distance_km": 1.57,
+        "lat": 26.1211108,
+        "lon": 91.6164279,
+        "score": 64.67,
+        "category": "High",
+        "reason": "Cut off from all service centers; estimated population 3000; nearest service center 1.57km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.6164279,
+          26.1211108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 12,
+        "name": "Kamalpur",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 14.03,
+        "lat": 26.3484407,
+        "lon": 91.6801679,
+        "score": 56.97,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 14.03km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.6801679,
+          26.3484407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 13,
+        "name": "Borka",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 11.88,
+        "lat": 26.2833341,
+        "lon": 91.6655016,
+        "score": 55.13,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 11.88km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.6655016,
+          26.2833341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 14,
+        "name": "Kamarkuchi",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 11.48,
+        "lat": 26.3491137,
+        "lon": 91.4800429,
+        "score": 54.79,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 11.48km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.4800429,
+          26.3491137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 15,
+        "name": "Settlement_7159393392",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 11.43,
+        "lat": 26.3627266,
+        "lon": 91.5435576,
+        "score": 54.75,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 11.43km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.5435576,
+          26.3627266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 16,
+        "name": "Palasbari",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 9.88,
+        "lat": 26.1206485,
+        "lon": 91.4521694,
+        "score": 53.42,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 9.88km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.4521694,
+          26.1206485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 17,
+        "name": "Changsari",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 7.79,
+        "lat": 26.263269,
+        "lon": 91.6963761,
+        "score": 51.64,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 7.79km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.6963761,
+          26.263269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 18,
+        "name": "Sessamukh",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 6.33,
+        "lat": 26.2455805,
+        "lon": 91.5864408,
+        "score": 50.4,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 6.33km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.5864408,
+          26.2455805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 19,
+        "name": "Kurua",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 4.66,
+        "lat": 26.2376126,
+        "lon": 91.8206191,
+        "score": 48.97,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 4.66km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.8206191,
+          26.2376126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "rank": 20,
+        "name": "Kalitakuchi",
+        "type": "village",
+        "population_est": 800,
+        "distance_km": 3.68,
+        "lat": 26.2740378,
+        "lon": 91.5133347,
+        "score": 48.14,
+        "category": "Medium",
+        "reason": "Cut off from all service centers; estimated population 800; nearest service center 3.68km away"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          91.5133347,
+          26.2740378
+        ]
+      }
+    }
+  ]
+}

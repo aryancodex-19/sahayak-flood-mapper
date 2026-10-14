@@ -7,6 +7,13 @@ import realPriorityRaw from "./real_priority.json";
 import realEventCutoffRaw from "./real_event_cutoff.json";
 import realEventPracticalRaw from "./real_event_practical.json";
 
+import mlCutoffRaw from "./ml_cutoff.json";
+import mlPracticalRaw from "./ml_practical.json";
+import mlConnectedRaw from "./ml_connected.json";
+import mlPriorityRaw from "./ml_priority.json";
+import mlFloodRaw from "./ml_flood.json";
+import mlMetaRaw from "./ml_meta.json";
+
 // Population mapping based on settlement classification
 const POPULATION_MAP: Record<string, number> = {
   town: 5000,
@@ -67,7 +74,7 @@ interface PriorityFeature {
   };
 }
 
-// Build map of pre-computed priority scores from priority_list.geojson
+// Build map of pre-computed priority scores from priority_list.geojson for Severe baseline
 const priorityFeatureMap = new Map<string, PriorityFeature["properties"]>();
 if (realPriorityRaw && Array.isArray((realPriorityRaw as { features?: PriorityFeature[] }).features)) {
   for (const feature of (realPriorityRaw as { features: PriorityFeature[] }).features) {
@@ -77,34 +84,51 @@ if (realPriorityRaw && Array.isArray((realPriorityRaw as { features?: PriorityFe
   }
 }
 
-// Transform real or severe data into Settlement models
+// Build map of pre-computed priority scores from genuine ML U-Net priority ranking
+const mlPriorityFeatureMap = new Map<string, PriorityFeature["properties"]>();
+if (mlPriorityRaw && Array.isArray((mlPriorityRaw as { features?: PriorityFeature[] }).features)) {
+  for (const feature of (mlPriorityRaw as { features: PriorityFeature[] }).features) {
+    if (feature.properties?.name) {
+      mlPriorityFeatureMap.set(feature.properties.name, feature.properties);
+    }
+  }
+}
+
+// Transform real, severe, or experimental ML data into Settlement models
 function buildSettlements(scenario: Scenario = "severe"): Settlement[] {
   const result: Settlement[] = [];
+  const isMl = scenario === "ml";
+  const isReal = scenario === "real";
 
   // Determine datasets based on scenario
-  const strictItems: RawCutoffItem[] =
-    scenario === "real"
-      ? (realEventCutoffRaw as RawCutoffItem[]) || []
-      : (realCutoffRaw as RawCutoffItem[]) || [];
+  const strictItems: RawCutoffItem[] = isMl
+    ? (mlCutoffRaw as RawCutoffItem[]) || []
+    : isReal
+    ? (realEventCutoffRaw as RawCutoffItem[]) || []
+    : (realCutoffRaw as RawCutoffItem[]) || [];
 
-  const practicalItems: RawPracticalItem[] =
-    scenario === "real"
-      ? (realEventPracticalRaw as RawPracticalItem[]) || []
-      : (realPracticalRaw as RawPracticalItem[]) || [];
+  const practicalItems: RawPracticalItem[] = isMl
+    ? (mlPracticalRaw as RawPracticalItem[]) || []
+    : isReal
+    ? (realEventPracticalRaw as RawPracticalItem[]) || []
+    : (realPracticalRaw as RawPracticalItem[]) || [];
 
   // For Real Event, all 104 settlements remain connected (0 strict, 0 practical cut-offs)
-  const connectedItems: RawConnectedItem[] =
-    scenario === "real"
-      ? [
-          ...((realCutoffRaw as RawConnectedItem[]) || []),
-          ...((realPracticalRaw as RawConnectedItem[]) || []),
-          ...((realConnectedRaw as RawConnectedItem[]) || []),
-        ]
-      : (realConnectedRaw as RawConnectedItem[]) || [];
+  const connectedItems: RawConnectedItem[] = isMl
+    ? (mlConnectedRaw as RawConnectedItem[]) || []
+    : isReal
+    ? [
+        ...((realCutoffRaw as RawConnectedItem[]) || []),
+        ...((realPracticalRaw as RawConnectedItem[]) || []),
+        ...((realConnectedRaw as RawConnectedItem[]) || []),
+      ]
+    : (realConnectedRaw as RawConnectedItem[]) || [];
+
+  const activePriorityMap = isMl ? mlPriorityFeatureMap : priorityFeatureMap;
 
   // 1. Strict Cut-offs
   for (const item of strictItems) {
-    const pInfo = priorityFeatureMap.get(item.name);
+    const pInfo = activePriorityMap.get(item.name);
     const pType = (item.place_type || item.type || "village").toLowerCase();
     const pop = pInfo?.population_est ?? POPULATION_MAP[pType] ?? 800;
     const score = pInfo?.score ?? 50.0;
@@ -130,8 +154,7 @@ function buildSettlements(scenario: Scenario = "severe"): Settlement[] {
     const pop = POPULATION_MAP[pType] ?? 800;
     const distanceKm = item.post_flood_distance_km ?? (item.pre_flood_distance_km ? item.pre_flood_distance_km * (item.detour_ratio ?? 3) : 25.0);
 
-    // Score on same standard formula: 40 + (0.4 * norm_pop) + (0.2 * norm_dist)
-    // Scaled such that strict cut-offs maintain highest emergency priority (Baihata remains #1)
+    // Score on standard formula: 40 + (0.4 * norm_pop) + (0.2 * norm_dist)
     const normPop = ((pop - 200) / (5000 - 200)) * 100;
     const normDist = Math.min(100, (distanceKm / 31.72) * 100);
     const score = Number((35.0 + 0.3 * normPop + 0.15 * normDist).toFixed(2));
@@ -176,7 +199,11 @@ function buildSettlements(scenario: Scenario = "severe"): Settlement[] {
 }
 
 // Build flood extent FeatureCollection matching expected schema
-function buildFloodExtent(): FloodGeoJSON {
+function buildFloodExtent(scenario: Scenario = "severe"): FloodGeoJSON {
+  if (scenario === "ml") {
+    return mlFloodRaw as FloodGeoJSON;
+  }
+
   return {
     type: "FeatureCollection",
     features: [
@@ -220,9 +247,9 @@ function buildFloodExtent(): FloodGeoJSON {
 }
 
 export function loadData(scenario: Scenario = "severe"): DataBundle & { stats: DashboardStats } {
-  const flood = buildFloodExtent();
+  const flood = buildFloodExtent(scenario);
   const settlements = buildSettlements(scenario);
-  const stats = computeStats({ flood, settlements });
+  const stats = computeStats({ flood, settlements }, scenario);
   return {
     flood,
     settlements,
@@ -230,7 +257,7 @@ export function loadData(scenario: Scenario = "severe"): DataBundle & { stats: D
   };
 }
 
-export function computeStats(data: DataBundle): DashboardStats {
+export function computeStats(data: DataBundle, scenario: Scenario = "severe"): DashboardStats {
   const { settlements } = data;
   
   // Cut-off settlements (strict + practical)
@@ -246,10 +273,26 @@ export function computeStats(data: DataBundle): DashboardStats {
       ? cutOffSettlements.reduce((sum, s) => sum + s.priorityScore, 0) / cutOffSettlements.length
       : 0;
 
+  if (scenario === "ml") {
+    return {
+      floodAreaHectares: mlMetaRaw.flood_area_hectares,
+      cutOffCount,
+      affectedPopulation,
+      averagePriorityScore: Number(avgPriority.toFixed(2)),
+      isExperimental: true,
+      disclaimer: mlMetaRaw.disclaimer,
+      floodedEdgesCount: mlMetaRaw.flooded_road_edges,
+      floodedEdgesPct: mlMetaRaw.flooded_road_pct,
+    };
+  }
+
   return {
     floodAreaHectares: 1950,
     cutOffCount,
     affectedPopulation,
     averagePriorityScore: Number(avgPriority.toFixed(2)),
+    isExperimental: false,
   };
 }
+
+export { mlMetaRaw };
