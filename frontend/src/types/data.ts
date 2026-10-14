@@ -1,6 +1,6 @@
 export type SettlementStatus = "cut-off" | "accessible";
 export type SettlementStatusType = "strict-cutoff" | "practical-cutoff" | "connected";
-export type Scenario = "real" | "severe";
+export type Scenario = "real" | "severe" | "ml";
 
 export interface Settlement {
   id: string;
@@ -40,6 +40,10 @@ export interface DashboardStats {
   cutOffCount: number;
   affectedPopulation: number;
   averagePriorityScore: number;
+  isExperimental?: boolean;
+  disclaimer?: string;
+  floodedEdgesCount?: number;
+  floodedEdgesPct?: number;
 }
 
 export interface DataBundle {

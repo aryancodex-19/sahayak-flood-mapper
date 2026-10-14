@@ -1,0 +1,23 @@
+{
+  "scenario_id": "ml",
+  "name": "Experimental ML — U-Net Prediction",
+  "short_name": "U-Net ML",
+  "model_architecture": "U-Net + ResNet34 Encoder",
+  "satellite": "Sentinel-1 SAR GRD (VV polarization)",
+  "pre_flood_date": "2022-06-08",
+  "post_flood_date": "2022-06-20",
+  "region": "Kamrup, Assam, India",
+  "crs": "EPSG:4326",
+  "total_flood_pixels": 158151,
+  "flood_area_hectares": 141395,
+  "total_road_edges": 20669,
+  "flooded_road_edges": 6306,
+  "flooded_road_pct": 30.51,
+  "flooded_bridges": 230,
+  "total_settlements": 104,
+  "strict_cutoff_count": 20,
+  "practical_cutoff_count": 0,
+  "connected_count": 84,
+  "disclaimer": "Experimental U-Net Prediction: Generated from Sentinel-1 SAR imagery using deep learning trained on weak pseudo-labels. These predictions have not been independently ground-truth validated.",
+  "is_experimental": true
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 342100536,
+    "name": "Changsari",
+    "place_type": "village",
+    "latitude": 26.263269,
+    "longitude": 91.6963761,
+    "nearest_graph_node": 11986876750,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 7.79
+  },
+  {
+    "id": 2885039361,
+    "name": "Amingaon",
+    "place_type": "suburb",
+    "latitude": 26.1861581,
+    "longitude": 91.6699507,
+    "nearest_graph_node": 10613387930,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 15.22
+  },
+  {
+    "id": 2885039364,
+    "name": "Kalitakuchi",
+    "place_type": "village",
+    "latitude": 26.2740378,
+    "longitude": 91.5133347,
+    "nearest_graph_node": 2595623123,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 3.68
+  },
+  {
+    "id": 5623038882,
+    "name": "Sunchali",
+    "place_type": "suburb",
+    "latitude": 26.2040027,
+    "longitude": 91.8037641,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 5623038906,
+    "name": "Kurua",
+    "place_type": "village",
+    "latitude": 26.2376126,
+    "longitude": 91.8206191,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 6160818822,
+    "name": "Noonmati Refinery",
+    "place_type": "suburb",
+    "latitude": 26.1836349,
+    "longitude": 91.8130252,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 6160896263,
+    "name": "নাৰেঙ্গী",
+    "place_type": "suburb",
+    "latitude": 26.1762413,
+    "longitude": 91.8292896,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 6160897853,
+    "name": "Pathar Quarry",
+    "place_type": "suburb",
+    "latitude": 26.1684939,
+    "longitude": 91.8298545,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 6161163702,
+    "name": "Jalukbari",
+    "place_type": "suburb",
+    "latitude": 26.1554983,
+    "longitude": 91.671224,
+    "nearest_graph_node": 10613387930,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 15.22
+  },
+  {
+    "id": 6161187086,
+    "name": "Noonmati",
+    "place_type": "suburb",
+    "latitude": 26.1979372,
+    "longitude": 91.7998576,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 6168664670,
+    "name": "Satgaon",
+    "place_type": "suburb",
+    "latitude": 26.158949,
+    "longitude": 91.8385701,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 6168664671,
+    "name": "Bonda Gaon",
+    "place_type": "suburb",
+    "latitude": 26.1806993,
+    "longitude": 91.841936,
+    "nearest_graph_node": 566703204,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 4.66
+  },
+  {
+    "id": 7157275460,
+    "name": "Kamalpur",
+    "place_type": "village",
+    "latitude": 26.3484407,
+    "longitude": 91.6801679,
+    "nearest_graph_node": 5452016800,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 11.4
+  },
+  {
+    "id": 7159263816,
+    "name": "Azara",
+    "place_type": "suburb",
+    "latitude": 26.1211108,
+    "longitude": 91.6164279,
+    "nearest_graph_node": 4976870788,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 1.57
+  },
+  {
+    "id": 7159263817,
+    "name": "Palasbari",
+    "place_type": "village",
+    "latitude": 26.1206485,
+    "longitude": 91.4521694,
+    "nearest_graph_node": 10601107686,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 9.88
+  },
+  {
+    "id": 7159370809,
+    "name": "Kamarkuchi",
+    "place_type": "village",
+    "latitude": 26.3491137,
+    "longitude": 91.4800429,
+    "nearest_graph_node": 10628437746,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 11.48
+  },
+  {
+    "id": 7159393392,
+    "name": "Settlement_7159393392",
+    "place_type": "village",
+    "latitude": 26.3627266,
+    "longitude": 91.5435576,
+    "nearest_graph_node": 10635433934,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 7.86
+  },
+  {
+    "id": 11665940838,
+    "name": "Borka",
+    "place_type": "village",
+    "latitude": 26.2833341,
+    "longitude": 91.6655016,
+    "nearest_graph_node": 5001367009,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 11.59
+  },
+  {
+    "id": 11669949212,
+    "name": "Sessamukh",
+    "place_type": "village",
+    "latitude": 26.2455805,
+    "longitude": 91.5864408,
+    "nearest_graph_node": 4992362587,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 6.33
+  },
+  {
+    "id": 12082230957,
+    "name": "Pandu",
+    "place_type": "suburb",
+    "latitude": 26.1634597,
+    "longitude": 91.6806078,
+    "nearest_graph_node": 10613387930,
+    "reason": "Strict cut-off: all road routes to service centers submerged",
+    "pre_flood_distance_km": 15.22
+  }
+]

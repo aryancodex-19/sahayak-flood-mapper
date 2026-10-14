@@ -32,28 +32,49 @@ const { t } = useLanguage();
       <div className="space-y-6 p-4">
         <div>
           <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Scenario</h3>
-          <div className="flex rounded-lg border border-border bg-background/50 p-1">
+          <div className="flex flex-col gap-1.5 rounded-lg border border-border bg-background/50 p-1.5">
+            <div className="flex gap-1">
+              <button
+                type="button"
+                onClick={() => onScenarioChange?.("severe")}
+                className={`flex-1 rounded px-2 py-1 text-xs font-medium transition-colors ${
+                  scenario === "severe"
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                }`}
+              >
+                Severe
+              </button>
+              <button
+                type="button"
+                onClick={() => onScenarioChange?.("real")}
+                className={`flex-1 rounded px-2 py-1 text-xs font-medium transition-colors ${
+                  scenario === "real"
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                }`}
+              >
+                Real Event
+              </button>
+            </div>
             <button
               type="button"
-              onClick={() => onScenarioChange?.("severe")}
-              className={`flex-1 rounded px-2.5 py-1 text-xs font-medium transition-colors ${
-                scenario === "severe"
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
+              onClick={() => onScenarioChange?.("ml")}
+              className={`w-full rounded px-2.5 py-1.5 text-xs font-medium transition-colors flex items-center justify-between border ${
+                scenario === "ml"
+                  ? "bg-purple-600 text-white border-purple-500 shadow-sm font-semibold"
+                  : "border-purple-500/30 text-purple-300/90 hover:text-purple-200 hover:bg-purple-500/10"
               }`}
             >
-              Severe Scenario
-            </button>
-            <button
-              type="button"
-              onClick={() => onScenarioChange?.("real")}
-              className={`flex-1 rounded px-2.5 py-1 text-xs font-medium transition-colors ${
-                scenario === "real"
-                  ? "bg-primary text-primary-foreground shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Real Event
+              <span className="flex items-center gap-1.5">
+                <span className={`h-1.5 w-1.5 rounded-full ${scenario === "ml" ? "bg-white" : "bg-purple-400"}`} />
+                Experimental ML (U-Net)
+              </span>
+              <span className={`text-[9px] px-1 py-0.5 rounded uppercase font-mono font-bold ${
+                scenario === "ml" ? "bg-purple-800 text-purple-100" : "bg-purple-500/20 text-purple-300"
+              }`}>
+                AI
+              </span>
             </button>
           </div>
         </div>

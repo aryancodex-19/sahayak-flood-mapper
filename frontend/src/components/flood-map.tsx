@@ -38,7 +38,11 @@ export function FloodMap({ flood, settlements, showFlood, showSettlements }: Flo
       <MapContainer center={[26.3, 91.7]} zoom={10} style={{ height: 500, width: "100%" }} className="rounded-lg border border-border z-0">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; OpenStreetMap contributors' />
         {showFlood && (
-          <GeoJSON data={flood} style={{ fillColor: "#38BDF8", color: "#38BDF8", weight: 1, fillOpacity: 0.35 }} />
+          <GeoJSON
+            key={flood.features.length + "-" + (flood.features[0]?.properties?.id || "empty")}
+            data={flood}
+            style={{ fillColor: "#38BDF8", color: "#38BDF8", weight: 1, fillOpacity: 0.35 }}
+          />
         )}
         {showSettlements && settlements.map((s) => {
           const markerColor =
