@@ -1,5 +1,6 @@
 import type { DataBundle, Settlement, FloodGeoJSON, DashboardStats, Scenario } from "@/types/data";
 
+import realFloodRaw from "./real_flood.json";
 import realCutoffRaw from "./real_cutoff.json";
 import realPracticalRaw from "./real_practical.json";
 import realConnectedRaw from "./real_connected.json";
@@ -11,7 +12,6 @@ import mlCutoffRaw from "./ml_cutoff.json";
 import mlPracticalRaw from "./ml_practical.json";
 import mlConnectedRaw from "./ml_connected.json";
 import mlPriorityRaw from "./ml_priority.json";
-import mlFloodRaw from "./ml_flood.json";
 import mlMetaRaw from "./ml_meta.json";
 
 // Population mapping based on settlement classification
@@ -198,56 +198,36 @@ function buildSettlements(scenario: Scenario = "severe"): Settlement[] {
   return result;
 }
 
-// Build flood extent FeatureCollection matching expected schema
-function buildFloodExtent(scenario: Scenario = "severe"): FloodGeoJSON {
-  if (scenario === "ml") {
-    return mlFloodRaw as FloodGeoJSON;
-  }
+// Build flood extent from real SAR GeoJSON
+function buildFloodExtent(): FloodGeoJSON {
+  return realFloodRaw as unknown as FloodGeoJSON;
+}
 
-  return {
-    type: "FeatureCollection",
-    features: [
-      {
-        type: "Feature",
-        properties: { id: "flood-sar-kamrup", areaHectares: 1950, confidence: 0.94 },
-        geometry: {
-          type: "Polygon",
-          coordinates: [
-            [
-              [91.45, 26.35],
-              [91.55, 26.42],
-              [91.75, 26.38],
-              [91.85, 26.28],
-              [91.82, 26.15],
-              [91.68, 26.18],
-              [91.52, 26.24],
-              [91.45, 26.35],
-            ],
-          ],
-        },
-      },
-      {
-        type: "Feature",
-        properties: { id: "flood-sar-choke-points", areaHectares: 480, confidence: 0.88 },
-        geometry: {
-          type: "Polygon",
-          coordinates: [
-            [
-              [91.66, 26.29],
-              [91.72, 26.33],
-              [91.76, 26.30],
-              [91.70, 26.26],
-              [91.66, 26.29],
-            ],
-          ],
-        },
-      },
-    ],
-  };
+function calculateFloodAreaHectares(flood: FloodGeoJSON): number {
+  const earthRadiusMeters = 6_371_008.8;
+  const polygonArea = (rings: number[][][]): number =>
+    Math.abs(
+      rings.reduce((area, ring, ringIndex) => {
+        let ringArea = 0;
+        for (let i = 0; i < ring.length - 1; i += 1) {
+          const [longitude1, latitude1] = ring[i];
+          const [longitude2, latitude2] = ring[i + 1];
+          const latitude1Radians = (latitude1 * Math.PI) / 180;
+          const latitude2Radians = (latitude2 * Math.PI) / 180;
+          ringArea +=
+            ((longitude2 - longitude1) * Math.PI / 180) *
+            (2 + Math.sin(latitude1Radians) + Math.sin(latitude2Radians));
+        }
+        const areaInSquareMeters = Math.abs((ringArea * earthRadiusMeters ** 2) / 2);
+        return area + (ringIndex === 0 ? areaInSquareMeters : -areaInSquareMeters);
+      }, 0),
+    ) / 10_000;
+
+  return flood.features.reduce((total, feature) => total + polygonArea(feature.geometry.coordinates), 0);
 }
 
 export function loadData(scenario: Scenario = "severe"): DataBundle & { stats: DashboardStats } {
-  const flood = buildFloodExtent(scenario);
+  const flood = buildFloodExtent();
   const settlements = buildSettlements(scenario);
   const stats = computeStats({ flood, settlements }, scenario);
   return {
@@ -287,7 +267,7 @@ export function computeStats(data: DataBundle, scenario: Scenario = "severe"): D
   }
 
   return {
-    floodAreaHectares: 1950,
+    floodAreaHectares: Math.round(calculateFloodAreaHectares(data.flood)),
     cutOffCount,
     affectedPopulation,
     averagePriorityScore: Number(avgPriority.toFixed(2)),
