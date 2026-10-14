@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import type { DataBundle, DashboardStats, Language } from "@/types/data";
@@ -12,7 +12,7 @@ interface SituationReportProps {
 export function SituationReport({ data, stats }: SituationReportProps) {
   const cutOffSettlements = data.settlements.filter((s) => s.status === "cut-off");
   const sorted = [...cutOffSettlements].sort((a, b) => b.priorityScore - a.priorityScore).slice(0, 3);
-  const date = useMemo(() => new Date().toLocaleDateString("en-IN"), []);
+  const [date] = useState(() => new Date().toLocaleDateString("en-IN"));
 
   return (
     <motion.div

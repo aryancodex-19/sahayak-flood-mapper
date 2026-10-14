@@ -324,6 +324,7 @@ def run_threshold_evaluation(
             tag = " **(Baseline)**" if abs(r["threshold"] - 0.50) < 1e-4 else ""
             f.write(f"| {r['threshold']:.2f}{tag} | {r['tp']:,} | {r['fp']:,} | {r['fn']:,} | {r['tn']:,} | "
                     f"{r['precision']:.4f} | {r['recall']:.4f} | {r['f1']:.4f} | {r['iou']:.4f} | "
+                    f"{r['pred_positive_pct']:.2f}% | {r['ref_positive_pct']:.2f}% |\n")
 
         f.write("\n## Fine-Grained Sweep (Transition Zone 0.45 – 0.55)\n\n")
         f.write("| Threshold | TP | FP | FN | TN | Precision | Recall | F1 Score | IoU | Pred Flood % |\n")
