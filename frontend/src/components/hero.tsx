@@ -17,10 +17,7 @@ export function Hero({ onViewMap }: HeroProps) {
         label: t("viewMap"),
         onClick: onViewMap,
       }}
-      secondaryCta={{
-        label: t("downloadReport"),
-        href: "#report",
-      }}
+
       plateLabel={t("heroSubtitle")}
       className="min-h-screen w-full"
     />
