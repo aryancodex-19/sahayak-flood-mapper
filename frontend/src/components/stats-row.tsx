@@ -29,4 +29,4 @@ export function StatsRow({ stats }: StatsRowProps) {
       ))}
     </motion.div>
   );
-}
+}
